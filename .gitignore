@@ -10,10 +10,10 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-Assets/T2.fbx
-Assets/T3.fbx
-Assets/Trafo 2 Variant.fbx
-Assets/Modelos/Trafo 2 Variant 1.fbx
+#Assets/T2.fbx
+#Assets/T3.fbx
+#Assets/Trafo 2 Variant.fbx
+#Assets/Modelos/Trafo 2 Variant 1.fbx
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
