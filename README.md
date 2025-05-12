@@ -29,7 +29,59 @@
 ### C#
 ![Logo do C#](https://th.bing.com/th/id/OIP.6UxvW14BegS1q8L7zgH_rwHaHa?rs=1&pid=ImgDetMain "C# Logo")
 
+## Estrutura de Pastas
 
+├── .gitignore
+├── .vsconfig
+├── Assets
+│ ├── Animation/ # Animações personalizadas do projeto
+│ ├── Models/ # Modelos 3D importados
+│ ├── Materials/ # Materiais e texturas customizadas
+│ ├── Imagens/ # Sprites e imagens de UI
+│ ├── Sounds/ # Efeitos sonoros e músicas
+│ ├── Simulations/ # Scripts de simulação (SimChaves, SimDisj)
+│ ├── Prefabs/ # Prefabs customizados do projeto
+│ ├── Scenes/ # Cenas principais do projeto
+│ └── Scripts/ # Scripts C# do jogo e da interface
+└── README.md
 
+> **Observação:** Pastas padrão do Unity como **Standard Assets**, **TextMesh Pro**, **SampleScenes** e **QuickOutline** foram omitidas.
 
+---
 
+## Descrição dos Principais Diretórios
+
+### Animation/
+Animações e controladores (Animator Controllers e Animation Clips) usados para portas, chaves, atuadores e outros mecanismos no ambiente.
+
+### Models/
+Modelos 3D representando componentes elétricos, estruturas de subestação e equipamentos diversos.
+
+### Materials/
+Texturas e materiais customizados aplicados aos modelos 3D, incluindo shaders específicos e ajustes de mapeamento.
+
+### Imagens/
+Sprites e imagens de interface (UI), como ícones de painel, botões e backgrounds de menus.
+
+### Sounds/
+Efeitos sonoros de chaveamento, relés, passos e efeitos sonoros.
+
+### Simulations/
+Lógica de simulação elétrica em C#, com subpastas:
+- **SimChaves/** – Simulação de circuitos e chaves.
+- **SimDisj/** – Simulação de disjuntores e proteções.
+
+### Prefabs/
+Objetos pré-configurados reutilizáveis em múltiplas cenas, como painéis elétricos, botões e indicadores luminosos.
+
+### Scenes/
+Cenas principais do projeto:
+- **Instrucoes.unity** – Tela de instruções e tutorial.
+- **MENU.unity** – Menu inicial com opções de navegação.
+- **Transformador.unity** – Ambiente de simulação de transformador.
+- **Treinamento.unity** – Cenário da subestação para exercícios práticos.
+
+### Scripts/
+Scripts C# que controlam:
+- Movimentação e câmeras (CameraController).
+- Interações do usuário (UIManager, ButtonHandlers).
