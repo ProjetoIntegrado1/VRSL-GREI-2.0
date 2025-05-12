@@ -1,12 +1,12 @@
 # VRSL-GREI-2.0
 
 ## Membros
-**Antônio Lucas Vieira de Lima**
-**John Lennon Fernandes de Andrade**
-**Luana Moreira Dias**
-**Henrique Segundo da Fonseca**
-**Luis Henrique da Costa Silva**
-**João Amauri Rodrigues do Nascimento**
+**Antônio Lucas Vieira de Lima** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
+**John Lennon Fernandes de Andrade** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
+**Luana Moreira Dias** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
+**Henrique Segundo da Fonseca** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
+**Luis Henrique da Costa Silva** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
+**João Amauri Rodrigues do Nascimento** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
 
 ## Requisitos
 | ID | Title | Description | Priority |
