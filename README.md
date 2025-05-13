@@ -23,6 +23,9 @@
 | VSRF 10 | Visualizar Controles | Como usuário, gostaria de visualizar o esquema de botões utilizado no simulador de forma objetiva e simples. | High |
 | VSRF 11 | Controles | Como usuário, gostaria que o esquema de botões fosse o mais simples possível e ao mesmo tempo intuitivo. | Low |
 
+## Sobre  
+VRSL é um simualdor de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
+Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (GREI).
 ## Tecnologias 
 ### Unity Engine e C#
 <img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
