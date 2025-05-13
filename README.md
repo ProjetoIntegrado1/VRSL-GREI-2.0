@@ -24,10 +24,8 @@
 | VSRF 11 | Controles | Como usuário, gostaria que o esquema de botões fosse o mais simples possível e ao mesmo tempo intuitivo. | Low |
 
 ## Tecnologias 
-### Unity Engine
-![Logo da Unity](https://th.bing.com/th/id/R.48418fc7ec1423afea7e917292196018?rik=TwJBAP6LfbfoDQ&pid=ImgRaw&r=0 "Unity Logo")
-### C#
-![Logo do C#](https://th.bing.com/th/id/OIP.6UxvW14BegS1q8L7zgH_rwHaHa?rs=1&pid=ImgDetMain "C# Logo")
+### Unity Engine e C#
+<img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
 
 ## Estrutura de Pastas
 
