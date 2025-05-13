@@ -31,19 +31,21 @@
 
 ## Estrutura de Pastas
 
-- `.gitignore`
-- `.vsconfig`
-- **Assets/**
-  - `Animation/` – Animações personalizadas do projeto  
-  - `Models/` – Modelos 3D importados  
-  - `Materials/` – Materiais e texturas customizadas  
-  - `Imagens/` – Sprites e imagens de UI  
-  - `Sounds/` – Efeitos sonoros e músicas  
-  - `Simulations/` – Scripts de simulação (SimChaves, SimDisj)  
-  - `Prefabs/` – Prefabs customizados do projeto  
-  - `Scenes/` – Cenas principais do projeto  
-  - `Scripts/` – Scripts C# do jogo e da interface  
-- `README.md`
+```
+├── .gitignore
+├── .vsconfig
+├── Assets
+│ ├── Animation/ # Animações personalizadas do projeto
+│ ├── Models/ # Modelos 3D importados
+│ ├── Materials/ # Materiais e texturas customizadas
+│ ├── Imagens/ # Sprites e imagens de UI
+│ ├── Sounds/ # Efeitos sonoros e músicas
+│ ├── Simulations/ # Scripts de simulação (SimChaves, SimDisj)
+│ ├── Prefabs/ # Prefabs customizados do projeto
+│ ├── Scenes/ # Cenas principais do projeto
+│ └── Scripts/ # Scripts C# do jogo e da interface
+└── README.md
+```
 
 > **Observação:** Pastas padrão do Unity como **Standard Assets**, **TextMesh Pro**, **SampleScenes** e **QuickOutline** foram omitidas.
 
