@@ -30,7 +30,7 @@
 | VSBF 02 | Caixa de seleçõo de Botões | No menu inicial, a caixa de seleção dos botões é do que deveria ser, então mesmo que o usuário clique fora dele, ele é capaz de selecionar o botão. | High |
 
 ## Sobre  
-VRSL é um simualdor de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
+VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
 Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (GREI).
 ## Tecnologias 
 ### Unity Engine e C#
