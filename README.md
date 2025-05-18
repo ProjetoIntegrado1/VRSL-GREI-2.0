@@ -21,13 +21,13 @@
 | VSRF 08 | Alternar rapidamente entre pontos de interesse | **COMO** usuário, **QUERO** visitar rapidamente locais da subestação. **PARA** minimizar o tempo que posso acabar perdendo, seja em sala de aula ou em casa, navegando de um ponto a outro da subestação.  | Medium |
 | VSRF 09 | Surgir no mapa | **COMO** usuário, **QUERO** adentrar no ambiente 3D de modo a visualizar os principais pontos de interesse. **PARA** já na primeira observação, conseguir ver os pontos principais da subestação. | High |
 | VSRF 10 | Visualizar Controles | **COMO** usuário, **QUERO** visualizar o esquema de botões utilizado no simulador de forma objetiva e simples. **PARA** não ficar perdido e/ou confuso durante a navegação na subestação. | High |
-| VSRF 11 | Movimentar pelo mapa | **COMO** usuário, **QUERO** que o esquema de botões seja o mais simples possível e ao mesmo tempo intuitivo para que consiga andar pelo mapa sem problemas. **PARA** que mesmo não sendo tão letrado digitalmente, consiga utilizar ele de forma satisfatória. | Low |
+| VSRF 11 | Movimentar pelo mapa | **COMO** usuário, **QUERO** que o esquema de botões seja o mais simples possível e ao mesmo tempo intuitivo para que consiga andar pelo mapa sem problemas. **PARA** que, mesmo não sendo tão letrado digitalmente, consiga utilizar o simulador de forma satisfatória. | Low |
 
 ## BugFix
 | ID | Title | Description | Priority |
 | -- | ----- | ------------ | -------- |
-| VSBF 01 | Menus sobrepostos | Durante a navegação somos capazes de sobrepor menus aos outros, oque pode causar confusão. | High |
-| VSBF 02 | Caixa de seleçõo de Botões | No menu inicial, a caixa de seleção dos botões é do que deveria ser, então mesmo que o usuário clique fora dele, ele é capaz de selecionar o botão. | High |
+| VSBF 01 | Menus sobrepostos | Durante a navegação somos capazes de sobrepor menus aos outros, o que pode causar confusão, pois há conflito com o sistema de movimentação. | High |
+| VSBF 02 | Caixa de seleçõo de Botões | No menu inicial, a caixa de seleção dos botões é maior do que deveria ser. Então, mesmo que o usuário clique fora dela, ele é capaz de selecionar o botão. | High |
 
 ## Sobre  
 VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
@@ -51,7 +51,7 @@ Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (
 │ ├── Prefabs/ # Prefabs customizados do projeto
 │ ├── Scenes/ # Cenas principais do projeto
 │ └── Scripts/ # Scripts C# do jogo e da interface
-└── README.md
+└── README.md # Este arquivo
 ```
 
 > **Observação:** Pastas padrão do Unity como **Standard Assets**, **TextMesh Pro**, **SampleScenes** e **QuickOutline** foram omitidas.
