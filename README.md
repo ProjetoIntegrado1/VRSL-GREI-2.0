@@ -11,17 +11,17 @@
 ## Requisitos
 | ID | Title | Description | Priority |
 | -- | ----- | ------------ | -------- |
-| VSRF 01 | Mudar de área | Como usuário, desejo alternar entre os diferentes mapas do simulador de forma rápida. | High | 
-| VSRF 02 | Visualizar Diagramas | Como usuário, desejo visualizar os diferentes diagramas que são utilizados em uma subsestação. | High |
-| VSRF 03 | Visualizar Missões/Objetivos | Como usuário, gostaria de visualizar meus próximos passos para o andamento da aula e/ou atividade de forma que possua um roteiro coeso. | High |
-| VSRF 04 | Selecionar roteiro | Como usuário, gostaria de selecionar qual conjunto de missões/atividades irei realizar para as atividades que irei realizar em sala ou em casa. | Low |
-| VSRF 05 | Iniciar o jogo | Como usuário, gostaria de um menu inicial amigável e intuitivo que permita a manipulação por um único operador | High |
-| VSRF 06 | Visualizar Informações | Como usuário, gostaria de visualizar informações sobre componentes presentes na subsestação. | Medium |
-| VSRF 07 | Navegar de forma fluida | Como usuário, gostaria de utilizar o programa sem travamentos e/ou quedas de FPS em minha máquina. | Low |
-| VSRF 08 | Alternar rapidamente entre pontos de interesse | Como usuário, gostaria visitar rapidamente locais da subestação.  | Medium |
-| VSRF 09 | Surgir no mapa | Como usuário, gostaria de adentrar no ambiente 3D de modo a visualizar os principais pontos de interesse. | High |
-| VSRF 10 | Visualizar Controles | Como usuário, gostaria de visualizar o esquema de botões utilizado no simulador de forma objetiva e simples. | High |
-| VSRF 11 | Movimentar pelo mapa | Como usuário, gostaria que o esquema de botões fosse o mais simples possível e ao mesmo tempo intuitivo para que consiga andar pelo mapa sem problemas. | Low |
+| VSRF 01 | Mudar de área | **COMO** usuário, **QUERO** alternar entre os diferentes mapas do simulador de forma rápida. **PARA** que a aula ou minha atividade de casa prossiga de forma fluída. | High | 
+| VSRF 02 | Visualizar Diagramas | **COMO** usuário, **QUERO** visualizar os diferentes diagramas que são utilizados em uma subestação. **PARA** conseguir demonstrar os conteúdos vistos em cadeiras anteriores sendo utilizados em prática com componentes “reais”. | High |
+| VSRF 03 | Visualizar Missões/Objetivos | **COMO** usuário, **QUERO** visualizar meus próximos passos para o andamento da aula e/ou atividade de forma que possua um roteiro coeso. **PARA** não ficar perdido e ter meu aprendizado possivelmente prejudicado. | High |
+| VSRF 04 | Selecionar roteiro | **COMO** usuário, **QUERO** selecionar qual conjunto de missões/atividades irei realizar para as atividades que irei realizar em sala ou em casa. **PARA** manter uma linha de aprendizado que não me deixe confuso quanto a onde estou e o que estou fazendo na subestação. | Low |
+| VSRF 05 | Iniciar o jogo | **COMO** usuário, **QUERO** um menu inicial amigável e intuitivo que permita a manipulação por um único operador. **PARA** que como professor, não necessite de um terceiro para auxiliar com o simulador durante a aula. | High |
+| VSRF 06 | Visualizar Informações | **COMO** usuário, **QUERO** visualizar informações sobre componentes presentes na subestação. **PARA** aprender mais sobre como aqueles componentes funcionam e auxiliam no funcionamento da subestação. | Medium |
+| VSRF 07 | Navegar de forma fluida | **COMO** usuário, **QUERO** utilizar o programa sem travamentos e/ou quedas de FPS em minha máquina. **PARA** conseguir utilizar o simulador em máquinas que não sejam potentes, como as da minha casa. | Low |
+| VSRF 08 | Alternar rapidamente entre pontos de interesse | **COMO** usuário, **QUERO** visitar rapidamente locais da subestação. **PARA** minimizar o tempo que posso acabar perdendo, seja em sala de aula ou em casa, navegando de um ponto a outro da subestação.  | Medium |
+| VSRF 09 | Surgir no mapa | **COMO** usuário, **QUERO** adentrar no ambiente 3D de modo a visualizar os principais pontos de interesse. **PARA** já na primeira observação, conseguir ver os pontos principais da subestação. | High |
+| VSRF 10 | Visualizar Controles | **COMO** usuário, **QUERO** visualizar o esquema de botões utilizado no simulador de forma objetiva e simples. **PARA** não ficar perdido e/ou confuso durante a navegação na subestação. | High |
+| VSRF 11 | Movimentar pelo mapa | **COMO** usuário, **QUERO** que o esquema de botões seja o mais simples possível e ao mesmo tempo intuitivo para que consiga andar pelo mapa sem problemas. **PARA** que mesmo não sendo tão letrado digitalmente, consiga utilizar ele de forma satisfatória. | Low |
 
 ## BugFix
 | ID | Title | Description | Priority |
