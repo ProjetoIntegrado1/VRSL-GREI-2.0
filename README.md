@@ -27,7 +27,7 @@
 | ID | Title | Description | Priority |
 | -- | ----- | ------------ | -------- |
 | VSBF 01 | Menus sobrepostos | Durante a navegação somos capazes de sobrepor menus aos outros, o que pode causar confusão, pois há conflito com o sistema de movimentação. | High |
-| VSBF 02 | Caixa de seleçõo de Botões | No menu inicial, a caixa de seleção dos botões é maior do que deveria ser. Então, mesmo que o usuário clique fora dela, ele é capaz de selecionar o botão. | High |
+| VSBF 02 | Caixa de seleção de Botões | No menu inicial, a caixa de seleção dos botões é maior do que deveria ser. Então, mesmo que o usuário clique fora dela, ele é capaz de selecionar o botão. | High |
 
 ## Sobre  
 VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
