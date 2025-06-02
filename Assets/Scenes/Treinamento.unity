@@ -1656,6 +1656,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 225226495}
+  - {fileID: 304151436}
   - {fileID: 1343596995}
   - {fileID: 1371519518}
   - {fileID: 2144199300}
@@ -2642,7 +2643,7 @@ GameObject:
   - component: {fileID: 14870947}
   m_Layer: 5
   m_Name: T_4.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5984,7 +5985,7 @@ GameObject:
   - component: {fileID: 31332543}
   m_Layer: 5
   m_Name: T_AuxTransform
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33316,7 +33317,7 @@ GameObject:
   - component: {fileID: 95887346}
   m_Layer: 5
   m_Name: T_D8.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35963,7 +35964,7 @@ GameObject:
   - component: {fileID: 114139948}
   m_Layer: 5
   m_Name: T_1_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40843,7 +40844,7 @@ GameObject:
   - component: {fileID: 161018762}
   m_Layer: 5
   m_Name: T_D6_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43276,7 +43277,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 68
   orthographic: 0
   orthographic size: 5
@@ -47785,25 +47786,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1294814070}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1364892269}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: AlternarMenuPorObjeto
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1275213195}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1294814070}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -48047,7 +48036,7 @@ GameObject:
   - component: {fileID: 229468933}
   m_Layer: 5
   m_Name: T_D7.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50478,7 +50467,7 @@ GameObject:
   - component: {fileID: 247993774}
   m_Layer: 5
   m_Name: T_D7_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56731,6 +56720,151 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302864811}
   m_CullTransparentMesh: 0
+--- !u!1 &304151435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304151436}
+  - component: {fileID: 304151439}
+  - component: {fileID: 304151438}
+  - component: {fileID: 304151437}
+  m_Layer: 5
+  m_Name: Trafo_Infos (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &304151436
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304151435}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 691957430}
+  m_Father: {fileID: 9263852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 170, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &304151437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304151435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 304151438}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1294814070}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1275213195}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &304151438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304151435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &304151439
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304151435}
+  m_CullTransparentMesh: 0
 --- !u!1001 &304179936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61477,7 +61611,7 @@ GameObject:
   - component: {fileID: 332361460}
   m_Layer: 5
   m_Name: T_AuxB_HV
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63266,7 +63400,7 @@ GameObject:
   - component: {fileID: 351689043}
   m_Layer: 5
   m_Name: T_D8_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66303,7 +66437,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -67104,7 +67238,7 @@ GameObject:
   - component: {fileID: 379393319}
   m_Layer: 5
   m_Name: T_Aux_Line_Input
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74777,7 +74911,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -82771,7 +82905,7 @@ PrefabInstance:
       addedObject: {fileID: 2100917895}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: fac97d614c5c58a4c90ccc2181f6768d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2100917894}
+      addedObject: {fileID: 2100917897}
   m_SourcePrefab: {fileID: 100100000, guid: fac97d614c5c58a4c90ccc2181f6768d, type: 3}
 --- !u!1001 &492798979
 PrefabInstance:
@@ -86985,6 +87119,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc7a38a4cc7bef4da1788aad4b02f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &527258194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2877361025602660516, guid: 8881348870371f845b316c53fa00d621, type: 3}
+  m_PrefabInstance: {fileID: 193905271757630601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527093360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &528168975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87355,6 +87500,9 @@ GameObject:
   - component: {fileID: 533539554}
   - component: {fileID: 533539556}
   - component: {fileID: 533539555}
+  - component: {fileID: 533539559}
+  - component: {fileID: 533539558}
+  - component: {fileID: 533539557}
   m_Layer: 0
   m_Name: Thunder_Particle_System
   m_TagString: Untagged
@@ -87362,21 +87510,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &533539554
-Transform:
+--- !u!224 &533539554
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533539553}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -360.53, y: -273.32, z: 1850.6}
+  m_LocalPosition: {x: 0, y: 0, z: 1850.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1353010129}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -360.53, y: -273.32}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!199 &533539555
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -92186,6 +92338,60 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &533539557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533539553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bbf57ec543cee42a5aa0ec2dd9e457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &533539558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533539553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &533539559
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533539553}
+  m_CullTransparentMesh: 1
 --- !u!1 &536334473
 GameObject:
   m_ObjectHideFlags: 0
@@ -97420,7 +97626,7 @@ GameObject:
   - component: {fileID: 575347172}
   m_Layer: 5
   m_Name: Aim_Crosshair
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102729,7 +102935,7 @@ GameObject:
   - component: {fileID: 615040125}
   m_Layer: 5
   m_Name: T_11_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109727,7 +109933,7 @@ GameObject:
   - component: {fileID: 669030868}
   m_Layer: 5
   m_Name: T_Single-Line_Diagram
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111333,7 +111539,7 @@ GameObject:
   - component: {fileID: 679683505}
   m_Layer: 5
   m_Name: T_D11_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113077,6 +113283,85 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691819816}
   m_Mesh: {fileID: -767078134361369841, guid: e313937da72982e4c962f4a20743a9a0, type: 3}
+--- !u!1 &691957429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691957430}
+  - component: {fileID: 691957432}
+  - component: {fileID: 691957431}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &691957430
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691957429}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 304151436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &691957431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691957429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "INFORMA\xC7\xD5ES DOS\nCOMPONENTES"
+--- !u!222 &691957432
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691957429}
+  m_CullTransparentMesh: 0
 --- !u!23 &692535804 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4870131938633313335, guid: d8da3d43a9c41334b99d3b7a7e99469c, type: 3}
@@ -121514,7 +121799,7 @@ GameObject:
   - component: {fileID: 764393120}
   m_Layer: 5
   m_Name: T_D5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122134,7 +122419,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -122993,7 +123278,7 @@ GameObject:
   - component: {fileID: 773828049}
   m_Layer: 0
   m_Name: Travar
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123728,7 +124013,7 @@ GameObject:
   - component: {fileID: 783397360}
   m_Layer: 5
   m_Name: T_AuxB_Auxiliary_Services
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124522,7 +124807,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -125988,7 +126273,7 @@ GameObject:
   - component: {fileID: 805520134}
   m_Layer: 5
   m_Name: T_4_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129782,7 +130067,7 @@ GameObject:
   - component: {fileID: 848458090}
   m_Layer: 5
   m_Name: T_D10_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130372,7 +130657,7 @@ GameObject:
   - component: {fileID: 853708406}
   m_Layer: 5
   m_Name: T_Infos_Trafo1
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132938,7 +133223,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -133721,7 +134006,7 @@ GameObject:
   - component: {fileID: 884289101}
   m_Layer: 5
   m_Name: T_Aux_Measurement
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133833,7 +134118,7 @@ GameObject:
   - component: {fileID: 886668943}
   m_Layer: 5
   m_Name: T_3_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135114,7 +135399,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -179351,7 +179636,7 @@ GameObject:
   - component: {fileID: 956268679}
   m_Layer: 5
   m_Name: T_D1_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188621,7 +188906,7 @@ GameObject:
   - component: {fileID: 1021553333}
   m_Layer: 5
   m_Name: T_6_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198173,7 +198458,7 @@ GameObject:
   - component: {fileID: 1100961930}
   m_Layer: 5
   m_Name: T_2.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205540,7 +205825,7 @@ GameObject:
   - component: {fileID: 1160223227}
   m_Layer: 5
   m_Name: T_D3_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208312,7 +208597,7 @@ GameObject:
   - component: {fileID: 1178721638}
   m_Layer: 5
   m_Name: T_D9_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208845,7 +209130,7 @@ GameObject:
   - component: {fileID: 1184868724}
   m_Layer: 5
   m_Name: T_Paramet_Trafo2
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209579,7 +209864,7 @@ GameObject:
   - component: {fileID: 1191237561}
   m_Layer: 5
   m_Name: T_9_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252291,7 +252576,7 @@ GameObject:
   - component: {fileID: 1214970649}
   m_Layer: 5
   m_Name: T_10_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257137,7 +257422,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2100917894}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Out
         m_Mode: 1
@@ -263134,11 +263419,11 @@ GameObject:
   - component: {fileID: 1275213196}
   m_Layer: 5
   m_Name: Screens_System_Information
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1275213196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264993,7 +265278,7 @@ GameObject:
   - component: {fileID: 1294814071}
   m_Layer: 5
   m_Name: T_Protection_Trafos
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266133,7 +266418,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -274270,10 +274555,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3cf9bcd9f72864b93cd6e8b2a7ad48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogador: {fileID: 527258192}
-  somBotao: {fileID: 0}
-  interacao: 27
-  tela: {fileID: 1477203388}
+  pauseKey: 27
+  buttonSound: {fileID: 0}
+  pauseMenu: {fileID: 1477203388}
+  crosshair: {fileID: 575347170}
+  fpsController: {fileID: 527258194}
 --- !u!82 &1364892270
 AudioSource:
   m_ObjectHideFlags: 0
@@ -285054,7 +285340,7 @@ GameObject:
   - component: {fileID: 1453825343}
   m_Layer: 5
   m_Name: Guide
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285177,7 +285463,7 @@ GameObject:
   - component: {fileID: 1453917957}
   m_Layer: 5
   m_Name: T_Aux_Protection
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287991,7 +288277,7 @@ GameObject:
   - component: {fileID: 1477203390}
   m_Layer: 0
   m_Name: Tablet
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292811,7 +293097,7 @@ GameObject:
   - component: {fileID: 1514842218}
   m_Layer: 5
   m_Name: T_D3.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293488,7 +293774,7 @@ GameObject:
   - component: {fileID: 1519363719}
   m_Layer: 5
   m_Name: T_Sistems_Fault_Information
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295711,7 +295997,7 @@ GameObject:
   - component: {fileID: 1541627187}
   m_Layer: 5
   m_Name: T_D6.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302361,7 +302647,7 @@ GameObject:
   - component: {fileID: 1580415786}
   m_Layer: 5
   m_Name: T_7_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303893,7 +304179,7 @@ GameObject:
   - component: {fileID: 1609671238}
   m_Layer: 5
   m_Name: T_Infos_Trafo2
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304861,7 +305147,7 @@ GameObject:
   - component: {fileID: 1611999500}
   m_Layer: 5
   m_Name: T_11.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308349,7 +308635,7 @@ GameObject:
   - component: {fileID: 1632917157}
   m_Layer: 5
   m_Name: Goals
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311478,7 +311764,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -311605,7 +311891,7 @@ GameObject:
   - component: {fileID: 1657993084}
   m_Layer: 5
   m_Name: T_AuxB_MV
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321860,7 +322146,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -323425,7 +323711,7 @@ GameObject:
   - component: {fileID: 1770376600}
   m_Layer: 5
   m_Name: T_8.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333263,7 +333549,7 @@ GameObject:
   - component: {fileID: 1851848907}
   m_Layer: 5
   m_Name: T_5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337268,7 +337554,7 @@ GameObject:
   - component: {fileID: 1877209361}
   m_Layer: 5
   m_Name: T_D4_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343807,7 +344093,7 @@ GameObject:
   - component: {fileID: 1921783533}
   m_Layer: 5
   m_Name: T_D10.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350692,7 +350978,7 @@ GameObject:
   - component: {fileID: 1965576194}
   m_Layer: 5
   m_Name: T_D9.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351014,7 +351300,7 @@ GameObject:
   - component: {fileID: 1967448780}
   m_Layer: 5
   m_Name: T_8_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353484,7 +353770,7 @@ GameObject:
   - component: {fileID: 1988226934}
   m_Layer: 5
   m_Name: T_Aux_Distribuition
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354142,7 +354428,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -355873,7 +356159,7 @@ GameObject:
   - component: {fileID: 2006993380}
   m_Layer: 5
   m_Name: T_D5.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356166,7 +356452,7 @@ GameObject:
   - component: {fileID: 2007544789}
   m_Layer: 5
   m_Name: T_D2_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360075,7 +360361,7 @@ GameObject:
   - component: {fileID: 2033569837}
   m_Layer: 5
   m_Name: T_2_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367213,7 +367499,7 @@ GameObject:
   - component: {fileID: 2100807496}
   m_Layer: 5
   m_Name: T_Paramet_Trafo1
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367306,26 +367592,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: fac97d614c5c58a4c90ccc2181f6768d, type: 3}
   m_PrefabInstance: {fileID: 491611665}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2100917894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100917893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be60c50a7a9d15469e30844ae70d7a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jogador: {fileID: 527258192}
-  somBotao: {fileID: 0}
-  interacao: 101
-  tela1: {fileID: 1275213195}
-  telas_n_principais: {fileID: 865655258}
-  telas_simu: {fileID: 1057099949}
-  mira: {fileID: 575347170}
-  distanciaMinima: 1
 --- !u!82 &2100917895
 AudioSource:
   m_ObjectHideFlags: 0
@@ -367427,6 +367693,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: fac97d614c5c58a4c90ccc2181f6768d, type: 3}
   m_PrefabInstance: {fileID: 491611665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100917897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100917893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dac7f072b823f741972f37a3884f959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaInteracao: 2
+  teclaInteracao: 101
+  somInteracao: {fileID: 0}
+  menuNotebook: {fileID: 1275213195}
 --- !u!1001 &2100932080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372311,7 +372593,7 @@ GameObject:
   - component: {fileID: 2145205765}
   m_Layer: 5
   m_Name: T_D4.5_SCADA
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373337,6 +373619,10 @@ PrefabInstance:
     - target: {fileID: 472330055761853189, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: field of view
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 472330055761853189, guid: 8881348870371f845b316c53fa00d621, type: 3}
+      propertyPath: far clip plane
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2196508252782796146, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalPosition.y

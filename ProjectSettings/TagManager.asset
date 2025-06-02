@@ -17,6 +17,7 @@ TagManager:
   - Porta
   - Porta2
   - Porta3
+  - Menu
   layers:
   - Default
   - TransparentFX

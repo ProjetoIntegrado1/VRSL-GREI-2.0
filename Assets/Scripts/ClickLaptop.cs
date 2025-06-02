@@ -1,100 +1,62 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
-//using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
-
 public class ClickLaptop : MonoBehaviour
 {
-    public Transform jogador;
-    public AudioClip somBotao;
+    [Header("Configurações")]
+    public float distanciaMinima = 1f;
     public KeyCode interacao = KeyCode.E;
-    public GameObject tela1;
-    public GameObject telas_n_principais;
-    public GameObject telas_simu;
-    public GameObject mira;
+    public AudioClip somBotao;
 
-    [Range(1, 50)]
-    public float distanciaMinima = 1;
-    float distancia;
-    AudioSource aud;
+    [Header("Referências")]
+    public Transform jogador;
+    public GameObject laptopMenu; // Objeto pai de todas as telas
+    private AudioSource aud;
+    private MenuSystem menuSystem;
 
     void Awake()
     {
-        telas_n_principais.SetActive(false);
-        telas_simu.SetActive(false);
         aud = GetComponent<AudioSource>();
-        if (somBotao)
-        {
-            aud.clip = somBotao;
-        }
         aud.playOnAwake = false;
         aud.loop = false;
-        
+        aud.clip = somBotao;
+
+        // Encontra o sistema de menus automaticamente
+        menuSystem = FindObjectOfType<MenuSystem>();
+
+        // Garante que o menu comece fechado
+        if (laptopMenu != null) laptopMenu.SetActive(false);
     }
 
     void Update()
     {
-        if (jogador)
+        if (jogador == null || menuSystem == null) return;
+
+        float distancia = Vector3.Distance(transform.position, jogador.position);
+        if (distancia < distanciaMinima && Input.GetKeyDown(interacao))
         {
-            distancia = Vector3.Distance(transform.position, jogador.transform.position);
-            // to test       print(distancia);
-            if (distancia < distanciaMinima)
+            // Toca som se disponível
+            if (aud.clip != null) aud.PlayOneShot(aud.clip);
+
+            // Abre ou fecha o menu do laptop
+            if (laptopMenu.activeSelf)
             {
-                if (Input.GetKeyDown(interacao) && telas_n_principais.activeInHierarchy==false && telas_simu.activeInHierarchy==false)
-                {
-                    if (aud.clip != null)
-                    {
-                        aud.PlayOneShot(aud.clip);
-                    }
-
-                    if (Time.timeScale == 1)
-                    {
-                        Time.timeScale = 0;
-                        jogador.GetComponent<FirstPersonController>().m_MouseLook.XSensitivity = 0;
-                        jogador.GetComponent<FirstPersonController>().m_MouseLook.YSensitivity = 0;
-                        jogador.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(false);
-                        //jogador.GetComponent<FirstPersonController>().m_MouseLook.UpdateCursorLock();
-                        telas_n_principais.SetActive(true);
-                        telas_simu.SetActive(true);
-                        mira.SetActive(false);
-
-                    }
-                    else
-                    {
-                        Time.timeScale = 1;
-                        jogador.GetComponent<FirstPersonController>().m_MouseLook.XSensitivity = 2;
-                        jogador.GetComponent<FirstPersonController>().m_MouseLook.YSensitivity = 2;
-                        jogador.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(true);
-                        telas_n_principais.SetActive(false);
-                        telas_simu.SetActive(false);
-                        mira.SetActive(true);
-                    }
-
-                    if (tela1 != null)
-                    {
-                        bool isActive = tela1.activeSelf;
-                        tela1.SetActive(!isActive);
-                    }
-
-
-
-                }
+                menuSystem.CloseAllMenus();
+            }
+            else
+            {
+                menuSystem.OpenMenu(laptopMenu, true);
             }
         }
     }
 
-
-    public void Out()
+    // Método para ser chamado pelo botão "Sair"
+    public void FecharLaptop()
     {
-        tela1.SetActive(false);
-        Time.timeScale = 1;
-        jogador.GetComponent<FirstPersonController>().m_MouseLook.XSensitivity = 2;
-        jogador.GetComponent<FirstPersonController>().m_MouseLook.YSensitivity = 2;
-        jogador.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(true);
-        telas_n_principais.SetActive(false);
-        telas_simu.SetActive(false);
+        if (menuSystem != null && laptopMenu.activeSelf)
+        {
+            menuSystem.CloseAllMenus();
+        }
     }
 }
