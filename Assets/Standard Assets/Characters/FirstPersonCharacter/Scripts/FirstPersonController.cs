@@ -45,7 +45,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool upfeets, UpperFeets;
 
         // Variables used by the function "Squat"
-      
 
         // Use this for initialization
         private void Start()
@@ -60,7 +59,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-     
         }
 
 
@@ -101,8 +99,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 UpperFeets = false;
             }
 
-
-
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -130,10 +126,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
-
-            
         }
-
 
         private void Crouchingg()
         {

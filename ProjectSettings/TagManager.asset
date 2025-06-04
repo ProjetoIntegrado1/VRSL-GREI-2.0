@@ -17,6 +17,8 @@ TagManager:
   - Porta
   - Porta2
   - Porta3
+  - Menu
+  - Cameras
   layers:
   - Default
   - TransparentFX
