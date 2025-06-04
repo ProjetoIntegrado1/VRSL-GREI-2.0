@@ -12,7 +12,7 @@
 | ID | Title | Description | Priority | Status |
 | -- | ----- | ------------ | -------- | -------- |
 | VSRF 01 | Mudar de área | **COMO** usuário, **QUERO** alternar entre os diferentes mapas do simulador de forma rápida. **PARA** que a aula ou minha atividade de casa prossiga de forma fluída. | High | In progress |
-| VSRF 02 | Visualizar Diagramas | **COMO** usuário, **QUERO** visualizar os diferentes diagramas que são utilizados em uma subestação. **PARA** conseguir demonstrar os conteúdos vistos em cadeiras anteriores sendo utilizados em prática com componentes “reais”. | High | To do |
+| VSRF 02 | Visualizar Diagramas | **COMO** usuário, **QUERO** visualizar os diferentes diagramas que são utilizados em uma subestação. **PARA** conseguir demonstrar os conteúdos vistos em cadeiras anteriores sendo utilizados em prática com componentes “reais”. | High | In progress |
 | VSRF 03 | Visualizar Missões/Objetivos | **COMO** usuário, **QUERO** visualizar meus próximos passos para o andamento da aula e/ou atividade de forma que possua um roteiro coeso. **PARA** não ficar perdido e ter meu aprendizado possivelmente prejudicado. | High | To do |
 | VSRF 04 | Selecionar roteiro | **COMO** usuário, **QUERO** selecionar qual conjunto de missões/atividades irei realizar para as atividades que irei realizar em sala ou em casa. **PARA** manter uma linha de aprendizado que não me deixe confuso quanto a onde estou e o que estou fazendo na subestação. | Low | To do |
 | VSRF 05 | Iniciar o jogo | **COMO** usuário, **QUERO** um menu inicial amigável e intuitivo que permita a manipulação por um único operador. **PARA** que como professor, não necessite de um terceiro para auxiliar com o simulador durante a aula. | High | To do |
