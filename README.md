@@ -94,3 +94,6 @@ Cenas principais do projeto:
 Scripts C# que controlam:
 - Movimentação e câmeras (CameraController).
 - Interações do usuário (UIManager, ButtonHandlers).
+
+## Executável teste
+https://drive.google.com/drive/folders/17Sk6nZuAYeObsZY-wOQt01NrUsCHnuJa?usp=sharing
