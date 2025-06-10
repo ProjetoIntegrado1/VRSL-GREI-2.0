@@ -17010,7 +17010,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 102511975}
         m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
         m_MethodName: CloseAllMenus
         m_Mode: 1
