@@ -36,6 +36,39 @@ Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (
 ### Unity Engine e C#
 <img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
 
+## Guia de Instalação
+
+Siga os passos abaixo para configurar e executar este projeto Unity corretamente no seu computador.
+
+### 1. Baixar e Instalar o Unity Hub e o Unity Editor
+
+1. Acesse: [https://unity.com/download](https://unity.com/download)
+2. Faça o download do Unity Hub para o seu sistema operacional.
+3. No Unity Hub, instale a versão **2022.3.32f1** do Unity Editor.
+
+### 2. Clonar o Repositório
+
+1. Abra o terminal (ou Git Bash).
+2. Execute o comando abaixo, substituindo pelo link correto do repositório:
+
+```bash
+git clone https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0
+```
+
+### 3. Baixar os Arquivos Grandes (Acima de 100 MB)
+
+Alguns arquivos não podem ser versionados diretamente no GitHub e estão disponíveis nos **Releases** do repositório:
+
+1. Acesse: [https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases](https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases)
+2. Faça o download dos arquivos.
+3. Copie cada arquivo para a pasta indicada dentro do diretório clonado (verifique o nome e caminho em cada release).
+
+### 4. Abrir o Projeto no Unity Hub
+
+1. No Unity Hub, clique em **Add** (Adicionar).
+2. Navegue até a pasta do projeto que você clonou e a adicione.
+3. Execute no Unity Hub e aguarde o carregamento e a indexação de assets pelo Unity.
+
 ## Estrutura de Pastas
 
 ```
