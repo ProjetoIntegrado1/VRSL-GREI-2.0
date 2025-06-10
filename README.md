@@ -11,7 +11,7 @@
 ## Requisitos
 | ID | Title | Description | Priority | Status |
 | -- | ----- | ------------ | -------- | -------- |
-| VSRF 01 | Mudar de área | **COMO** usuário, **QUERO** alternar entre os diferentes mapas do simulador de forma rápida. **PARA** que a aula ou minha atividade de casa prossiga de forma fluída. | High | In progress |
+| VSRF 01 | Mudar de área | **COMO** usuário, **QUERO** alternar entre os diferentes mapas do simulador de forma rápida. **PARA** que a aula ou minha atividade de casa prossiga de forma fluída. | High | Done |
 | VSRF 02 | Visualizar Diagramas | **COMO** usuário, **QUERO** visualizar os diferentes diagramas que são utilizados em uma subestação. **PARA** conseguir demonstrar os conteúdos vistos em cadeiras anteriores sendo utilizados em prática com componentes “reais”. | High | In progress |
 | VSRF 03 | Visualizar Missões/Objetivos | **COMO** usuário, **QUERO** visualizar meus próximos passos para o andamento da aula e/ou atividade de forma que possua um roteiro coeso. **PARA** não ficar perdido e ter meu aprendizado possivelmente prejudicado. | High | To do |
 | VSRF 04 | Selecionar roteiro | **COMO** usuário, **QUERO** selecionar qual conjunto de missões/atividades irei realizar para as atividades que irei realizar em sala ou em casa. **PARA** manter uma linha de aprendizado que não me deixe confuso quanto a onde estou e o que estou fazendo na subestação. | Low | To do |
@@ -19,14 +19,14 @@
 | VSRF 06 | Visualizar Informações | **COMO** usuário, **QUERO** visualizar informações sobre componentes presentes na subestação. **PARA** aprender mais sobre como aqueles componentes funcionam e auxiliam no funcionamento da subestação. | Medium | To do |
 | VSRF 07 | Navegar de forma fluida | **COMO** usuário, **QUERO** utilizar o programa sem travamentos e/ou quedas de FPS em minha máquina. **PARA** conseguir utilizar o simulador em máquinas que não sejam potentes, como as da minha casa. | Low | To do |
 | VSRF 08 | Alternar rapidamente entre pontos de interesse | **COMO** usuário, **QUERO** visitar rapidamente locais da subestação. **PARA** minimizar o tempo que posso acabar perdendo, seja em sala de aula ou em casa, navegando de um ponto a outro da subestação.  | Medium | To do |
-| VSRF 09 | Surgir no mapa | **COMO** usuário, **QUERO** adentrar no ambiente 3D de modo a visualizar os principais pontos de interesse. **PARA** já na primeira observação, conseguir ver os pontos principais da subestação. | High | In progress |
+| VSRF 09 | Surgir no mapa | **COMO** usuário, **QUERO** adentrar no ambiente 3D de modo a visualizar os principais pontos de interesse. **PARA** já na primeira observação, conseguir ver os pontos principais da subestação. | High | Done |
 | VSRF 10 | Visualizar Controles | **COMO** usuário, **QUERO** visualizar o esquema de botões utilizado no simulador de forma objetiva e simples. **PARA** não ficar perdido e/ou confuso durante a navegação na subestação. | High | To do |
 | VSRF 11 | Movimentar pelo mapa | **COMO** usuário, **QUERO** que o esquema de botões seja o mais simples possível e ao mesmo tempo intuitivo para que consiga andar pelo mapa sem problemas. **PARA** que, mesmo não sendo tão letrado digitalmente, consiga utilizar o simulador de forma satisfatória. | Low | To do |
 
 ## BugFix
 | ID | Title | Description | Priority | Status |
 | -- | ----- | ------------ | -------- | -------- |
-| VSBF 01 | Menus sobrepostos | Durante a navegação somos capazes de sobrepor menus aos outros, o que pode causar confusão, pois há conflito com o sistema de movimentação. | High | In progress |
+| VSBF 01 | Menus sobrepostos | Durante a navegação somos capazes de sobrepor menus aos outros, o que pode causar confusão, pois há conflito com o sistema de movimentação. | High | Done |
 | VSBF 02 | Caixa de seleção de Botões | No menu inicial, a caixa de seleção dos botões é maior do que deveria ser. Então, mesmo que o usuário clique fora dela, ele é capaz de selecionar o botão. | High | In progress |
 
 ## Sobre  
