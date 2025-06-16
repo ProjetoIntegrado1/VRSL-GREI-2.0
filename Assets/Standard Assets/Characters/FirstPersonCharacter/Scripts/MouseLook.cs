@@ -74,14 +74,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void InternalLockUpdate()
         {
-            if(Input.GetKeyUp(KeyCode.Escape))
+            // Estava entrando em conflito com o sistema de menus
+            /*if(Input.GetKeyUp(KeyCode.Escape))
             {
                 m_cursorIsLocked = false;
             }
             else if(Input.GetMouseButtonUp(0))
             {
                 m_cursorIsLocked = true;
-            }
+            }*/
 
             if (m_cursorIsLocked)
             {

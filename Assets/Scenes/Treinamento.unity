@@ -63362,9 +63362,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1914224174}
-        m_TargetAssemblyTypeName: S_TrocarCena, Assembly-CSharp
-        m_MethodName: Jogar
+      - m_Target: {fileID: 1364892269}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63374,9 +63374,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1914224175}
-        m_TargetAssemblyTypeName: S_Despausar, Assembly-CSharp
-        m_MethodName: Despausar
+      - m_Target: {fileID: 1364892272}
+        m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
+        m_MethodName: IrParaNotebook
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -191349,7 +191349,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1041668923}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1364892269}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1364892272}
+        m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
+        m_MethodName: IrParaTransformador
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1041668923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201011,9 +201035,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 652636742}
-        m_TargetAssemblyTypeName: S_TrocarCena, Assembly-CSharp
-        m_MethodName: Jogar
+      - m_Target: {fileID: 1364892269}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -201023,9 +201047,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 652636743}
-        m_TargetAssemblyTypeName: S_Despausar, Assembly-CSharp
-        m_MethodName: Despausar
+      - m_Target: {fileID: 1364892272}
+        m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
+        m_MethodName: IrParaPatio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -275268,6 +275292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDoLevelDeJogo: Treinamento
+  jogador: {fileID: 527093360}
 --- !u!1001 &1365376307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331691,6 +331716,50 @@ Transform:
   - {fileID: 1657993083}
   - {fileID: 1988226933}
   - {fileID: 783397359}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1834691223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834691225}
+  - component: {fileID: 1834691224}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1834691224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834691223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec4ad34e18cd7b4182ec9cbe45ecfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1834691225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834691223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.292553, y: 4.070492, z: 53.19796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1834767830
@@ -431617,6 +431686,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 193905271757630601}
   - {fileID: 2109173213}
+  - {fileID: 1834691225}
   - {fileID: 1673814475}
   - {fileID: 720049568}
   - {fileID: 654923680}

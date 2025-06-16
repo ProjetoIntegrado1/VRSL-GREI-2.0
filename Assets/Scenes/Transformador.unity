@@ -1493,6 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDoLevelDeJogo: Transformador
+  jogador: {fileID: 1436281784}
 --- !u!114 &102511975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,6 +1962,50 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &132050649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132050651}
+  - component: {fileID: 132050650}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &132050650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132050649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec4ad34e18cd7b4182ec9cbe45ecfd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &132050651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132050649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.292553, y: 4.070492, z: 53.19796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &135034303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8116053124639579351, guid: b0670b41c4633dc4184004abc5643ea8, type: 3}
@@ -3846,19 +3891,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.2
+      value: 32.61
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35000002
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.5
+      value: 34.73
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7911606
+      value: 0.9988706
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3866,7 +3911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.61160856
+      value: -0.047514252
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3878,7 +3923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 75.412
+      value: -5.447
       objectReference: {fileID: 0}
     - target: {fileID: 4497968079246432579, guid: 8881348870371f845b316c53fa00d621, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10495,7 +10540,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 932816983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102511975}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 102511974}
+        m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
+        m_MethodName: IrParaTransformador
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &932816983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19828,9 +19897,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 570212234}
-        m_TargetAssemblyTypeName: S_TrocarCena, Assembly-CSharp
-        m_MethodName: Jogar
+      - m_Target: {fileID: 102511975}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19840,9 +19909,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 570212235}
-        m_TargetAssemblyTypeName: S_Despausar, Assembly-CSharp
-        m_MethodName: Despausar
+      - m_Target: {fileID: 102511974}
+        m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
+        m_MethodName: IrParaPatio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23411,9 +23480,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1532158993}
-        m_TargetAssemblyTypeName: S_TrocarCena, Assembly-CSharp
-        m_MethodName: Jogar
+      - m_Target: {fileID: 102511975}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23423,9 +23492,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1532158994}
-        m_TargetAssemblyTypeName: S_Despausar, Assembly-CSharp
-        m_MethodName: Despausar
+      - m_Target: {fileID: 102511974}
+        m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
+        m_MethodName: IrParaNotebook
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -65252,3 +65321,4 @@ SceneRoots:
   - {fileID: 1227200337}
   - {fileID: 1219532270}
   - {fileID: 1332571904}
+  - {fileID: 132050651}

@@ -316,5 +316,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+        public void Warp(Vector3 position, Quaternion rotation)
+        {
+            m_CharacterController.enabled = false;
+            transform.position = position;
+            transform.rotation = rotation;
+            // Atualiza também o alvo da câmera (se você quiser dar tilt ao olhar)
+            m_Camera.transform.rotation = rotation;
+            // Sincroniza o MouseLook
+            m_MouseLook.Init(transform, m_Camera.transform);
+            m_CharacterController.enabled = true;
+        }
     }
 }
