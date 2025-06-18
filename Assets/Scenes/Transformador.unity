@@ -13643,7 +13643,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 102511974}
         m_TargetAssemblyTypeName: Menu_Principal_Gerenciamento, Assembly-CSharp
         m_MethodName: SairDoJogo
         m_Mode: 1

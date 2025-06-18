@@ -26,34 +26,12 @@ public class Menu_Principal_Gerenciamento : MonoBehaviour
 
     public void IrParaPatio()
     {
-        if (SceneManager.GetActiveScene().name == "Treinamento")
-        {
-            var fpc = jogador.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
-            fpc.Warp(
-                new Vector3(40.04f, 0.99f, 24.56f),
-                Quaternion.Euler(0f, -98.043f, 0f)
-            );
-        }
-        else
-        {
-            SceneManager.LoadScene("Treinamento");
-        }
+        GameManager.Instance.IrParaPatio();
     }
 
     public void IrParaTransformador()
     {
-        if (SceneManager.GetActiveScene().name == "Transformador")
-        {
-            var fpc = jogador.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
-            fpc.Warp(
-                new Vector3(32.61f, 0.99f, 34.73f),
-                Quaternion.Euler(0f, -5.447f, 0f)
-            );
-        }
-        else
-        {
-            SceneManager.LoadScene("Transformador");
-        }
+        GameManager.Instance.IrParaTransformador();
     }
 
 }
