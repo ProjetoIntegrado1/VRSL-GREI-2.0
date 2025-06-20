@@ -1,19 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    // posição e rotação pendentes para warp após load
     private Vector3 pendingPosition;
     private Quaternion pendingRotation;
     private bool hasPendingWarp = false;
 
     void Awake()
     {
-        // singleton
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -21,7 +18,6 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -31,22 +27,55 @@ public class GameManager : MonoBehaviour
             SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    /// <summary>
+    /// Inicia warp na próxima cena "Treinamento", sem afetar spawn inicial.
+    /// </summary>
     public void IrParaNotebook()
     {
         const string targetScene = "Treinamento";
-        
         pendingPosition = new Vector3(10.65f, 0.99f, 9.827f);
         pendingRotation = Quaternion.Euler(0f, -155f, 0f);
 
         if (SceneManager.GetActiveScene().name == targetScene)
         {
-            ExecuteWarp();
+            ApplyWarp();
         }
         else
         {
             hasPendingWarp = true;
-            // carregamento assíncrono
-            SceneManager.LoadSceneAsync(targetScene);
+            SceneManager.LoadScene(targetScene);
+        }
+    }
+
+    public void IrParaPatio()
+    {
+        const string targetScene = "Treinamento";
+        pendingPosition = new Vector3(40.04f, 0.99f, 24.56f);
+        pendingRotation = Quaternion.Euler(0f, -98.043f, 0f);
+
+        if (SceneManager.GetActiveScene().name == targetScene)
+        {
+            ApplyWarp();
+        }
+        else
+        {
+            SceneManager.LoadScene(targetScene);
+        }
+    }
+
+    public void IrParaTransformador()
+    {
+        const string targetScene = "Transformador";
+        pendingPosition = new Vector3(32.61f, 0.99f, 34.73f);
+        pendingRotation = Quaternion.Euler(0f, -5.447f, 0f);
+
+        if (SceneManager.GetActiveScene().name == targetScene)
+        {
+            ApplyWarp();
+        }
+        else
+        {
+            SceneManager.LoadScene(targetScene);
         }
     }
 
@@ -55,28 +84,22 @@ public class GameManager : MonoBehaviour
         if (!hasPendingWarp || scene.name != "Treinamento")
             return;
 
-        ExecuteWarp();
+        // Invoca ApplyWarp no próximo frame
+        Invoke(nameof(ApplyWarp), 0f);
         hasPendingWarp = false;
     }
 
-    private void ExecuteWarp()
+    private void ApplyWarp()
     {
-        StartCoroutine(DelayedWarp());
-    }
-
-    private IEnumerator DelayedWarp()
-    {
-        // espera um frame para garantir que todos os objetos da cena foram inicializados
-        yield return null;
-
-        // busca o FirstPersonController na cena atual
         var fpc = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
         if (fpc == null)
         {
-            Debug.LogError("FirstPersonController não encontrado após carregar a cena!");
-            yield break;
+            Debug.LogError("FirstPersonController não encontrado! Warp cancelado.");
+            return;
         }
-
-        fpc.Warp(pendingPosition, pendingRotation);
+        else
+        {
+            fpc.Warp(pendingPosition, pendingRotation);
+        }
     }
 }
