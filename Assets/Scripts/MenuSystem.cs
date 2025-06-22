@@ -73,6 +73,19 @@ public class MenuSystem : MonoBehaviour
         }
     }
 
+    public void EscMenu()
+    {
+        PlayButtonSound();
+        if (IsMenusOpen())
+        {
+            CloseAllMenus();
+        }
+        else if (currentState == MenuState.Crosshair)
+        {
+            OpenMenu(pauseMenu, true);
+        }
+    }
+
     public void OpenMenu(GameObject menu, bool pausar)
     {
         if (menu == null) return;
