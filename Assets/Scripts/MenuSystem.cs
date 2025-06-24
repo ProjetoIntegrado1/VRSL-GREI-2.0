@@ -19,6 +19,8 @@ public class MenuSystem : MonoBehaviour
     private AudioSource audioSource;
     private MenuState currentState = MenuState.Crosshair;
 
+    private bool cursosIsLock = true;
+
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -69,6 +71,28 @@ public class MenuSystem : MonoBehaviour
             else if (currentState == MenuState.Crosshair)
             {
                 OpenMenu(pauseMenu, true);
+            }
+        }
+
+        // Chama nossa função de toggle Alt-esq / Botão direito
+        HandleAltRightToggle();
+    }
+
+    private void HandleAltRightToggle()
+    {
+        // Detecta clique direito do mouse OU Alt esquerdo
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            PlayButtonSound();
+
+            // Se já está pausado (Time.timeScale == 0) --> despausa
+            if (Time.timeScale == 0f)
+            {
+                ResumeGame();   // reativa o jogo, trava cursor, reseta sensitivities, atualiza currentState
+            }
+            else // senão, pausa
+            {
+                PauseGame();    // pausa o jogo, libera cursor, zera sensitivities
             }
         }
     }
