@@ -45,6 +45,13 @@ public class HoverOutline : MonoBehaviour
 
     private void Update()
     {
+        // 0) Verifica se há uma câmera principal antes de tudo
+        if (Camera.main == null)
+        {
+            ClearCurrent();
+            return;
+        }
+
         // 1) Raycast só dispara se o ponteiro não estiver sobre UI
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         {
