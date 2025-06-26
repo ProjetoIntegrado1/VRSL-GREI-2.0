@@ -69,7 +69,7 @@ public class HoverOutline : MonoBehaviour
                 }
 
                 // clique
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && currentHovered == this)
                 {
                     menuSystem.OpenMenu(canvasDoObjeto, true);
                 }
@@ -84,7 +84,7 @@ public class HoverOutline : MonoBehaviour
 
     private void ClearCurrent()
     {
-        if (currentHovered != null)
+        if (currentHovered != null && menuSystem.allOutlinesEnabled == false)
         {
             currentHovered.outline.enabled = false;
             currentHovered = null;

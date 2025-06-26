@@ -134,7 +134,7 @@ public class MenuSystem : MonoBehaviour
         {
             CloseAllMenus();
         }
-        else if (currentState == MenuState.OtherMenu)
+        else if (currentState == MenuState.Crosshair)
         {
             OpenMenu(diagramaMenu, true);
         }
@@ -232,7 +232,7 @@ public class MenuSystem : MonoBehaviour
     }
 
     // Guarda o estado atual de todos os outlines
-    private bool allOutlinesEnabled = false;
+    public bool allOutlinesEnabled = false;
 
     /// <summary>
     /// Liga todos os Outline na cena, ou desliga todos se já estiverem ligados.
