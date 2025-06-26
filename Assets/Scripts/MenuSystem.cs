@@ -11,6 +11,7 @@ public class MenuSystem : MonoBehaviour
     public KeyCode pauseKey = KeyCode.Escape;
     public AudioClip buttonSound;
     public GameObject pauseMenu;
+    public GameObject diagramaMenu;
     public GameObject crosshair;
 
     [Header("Referências")]
@@ -18,8 +19,6 @@ public class MenuSystem : MonoBehaviour
 
     private AudioSource audioSource;
     private MenuState currentState = MenuState.Crosshair;
-
-    private bool cursosIsLock = true;
 
     void Awake()
     {
@@ -128,6 +127,19 @@ public class MenuSystem : MonoBehaviour
         }
     }
 
+    public void DiagramaMenu()
+    {
+        PlayButtonSound();
+        if (IsMenusOpen())
+        {
+            CloseAllMenus();
+        }
+        else if (currentState == MenuState.OtherMenu)
+        {
+            OpenMenu(diagramaMenu, true);
+        }
+    }
+
     public void CloseAllMenus()
     {
         // 1) Fecha todos os objetos ativos com tag "Menu"
@@ -217,5 +229,26 @@ public class MenuSystem : MonoBehaviour
     {
         Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !locked;
+    }
+
+    // Guarda o estado atual de todos os outlines
+    private bool allOutlinesEnabled = false;
+
+    /// <summary>
+    /// Liga todos os Outline na cena, ou desliga todos se já estiverem ligados.
+    /// </summary>
+    public void ToggleAllOutlines()
+    {
+        // Pega todos os componentes Outline na cena
+        Outline[] outlines = FindObjectsOfType<Outline>();
+
+        // Inverte o flag
+        allOutlinesEnabled = !allOutlinesEnabled;
+
+        // Aplica em cada outline
+        foreach (var o in outlines)
+        {
+            o.enabled = allOutlinesEnabled;
+        }
     }
 }
