@@ -1,74 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class S_AnimaPorta : MonoBehaviour
 {
-    
     Animator anima;
-    
-    bool cont;
+
+    // um bool para cada animação
+    bool cont1 = false;
+    bool cont2 = false;
+
     void Start()
     {
         anima = GetComponent<Animator>();
         anima.SetBool("Abrir", false);
         anima.SetBool("Abrir2", false);
-        cont =  false;
     }
 
-    void Update() 
-    { 
-      
-            if (Input.GetKeyDown(KeyCode.E) && S_MouseInteragir_2.Habilitar == true)
-            {
+    void Update()
+    {
+        // unifica E ou clique do mouse
+        bool abrirInput = Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0);
 
-                
-                if (cont == false)
-                {
-                
-                    anima.SetBool("Abrir", true);
-                    cont = true;
-                
-                }
-
-                else if (cont == true) 
-            
-                {
-                    anima.SetBool("Abrir", false);
-                    cont = false;
-                    
-                }
-             
-            }
-
-
-        if (Input.GetKeyDown(KeyCode.E) && S_MouseInteragir_2.Habilitar2 == true)
+        // Porta 1
+        if (abrirInput && S_MouseInteragir_2.Habilitar)
         {
-
-
-            if (cont == false)
-            {
-
-                anima.SetBool("Abrir2", true);
-                cont = true;
-
-            }
-
-            else if (cont == true)
-
-            {
-                anima.SetBool("Abrir2", false);
-                cont = false;
-
-            }
-
+            cont1 = !cont1;                      // alterna true/false
+            anima.SetBool("Abrir", cont1);       // seta parâmetro Abrir
         }
 
-
-
-
-
+        // Porta 2
+        if (abrirInput && S_MouseInteragir_2.Habilitar2)
+        {
+            cont2 = !cont2;                      // alterna true/false
+            anima.SetBool("Abrir2", cont2);      // seta parâmetro Abrir2
+        }
     }
-
 }
