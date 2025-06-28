@@ -79227,11 +79227,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1364892269}
         m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
-        m_MethodName: DiagramaMenu
-        m_Mode: 1
+        m_MethodName: SetStateOtherMenu
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 319225364}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -200180,12 +200180,33 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.79, y: 1, z: 0.43}
-  m_Center: {x: -0.38, y: 0.53, z: -0.2}
+  m_Center: {x: -0.38, y: 0.42, z: -0.2}
 --- !u!4 &1024389860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 90153cfd5efe43643851e437a6d1b13f, type: 3}
   m_PrefabInstance: {fileID: 2100691661}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1024389861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024389858}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.67, y: 1.86, z: 4.7}
+  m_Center: {x: 0.69, y: 0.92, z: 1.56}
 --- !u!1 &1026055578
 GameObject:
   m_ObjectHideFlags: 0
@@ -289608,22 +289629,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 319225364}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1477203388}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1364892269}
+        m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
+        m_MethodName: CloseAllMenus
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -340964,7 +340973,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1364892269}
         m_TargetAssemblyTypeName: MenuSystem, Assembly-CSharp
-        m_MethodName: EscMenu
+        m_MethodName: SetStateTabletMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -350471,7 +350480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VOLTAR
+  m_Text: FECHAR
 --- !u!222 &1826120731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -382435,9 +382444,7 @@ GameObject:
   - component: {fileID: 2024156263}
   - component: {fileID: 2024156265}
   - component: {fileID: 2024156264}
-  - component: {fileID: 2024156266}
-  - component: {fileID: 2024156267}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Control_House_ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382519,48 +382526,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!65 &2024156266
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024156262}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.93, y: 4.06, z: 0.2}
-  m_Center: {x: 8.04, y: 1.72, z: 4.22}
---- !u!65 &2024156267
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024156262}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07, y: 4.06, z: 4.06}
-  m_Center: {x: 7.98, y: 1.72, z: 2.13}
 --- !u!1001 &2024722676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392416,6 +392381,10 @@ PrefabInstance:
       value: 3-LEVEL_RACK_FOR_STORAGE
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 90153cfd5efe43643851e437a6d1b13f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 90153cfd5efe43643851e437a6d1b13f, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -392534,6 +392503,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 90153cfd5efe43643851e437a6d1b13f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1024389859}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 90153cfd5efe43643851e437a6d1b13f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1024389861}
   m_SourcePrefab: {fileID: 100100000, guid: 90153cfd5efe43643851e437a6d1b13f, type: 3}
 --- !u!1 &2100807495
 GameObject:
