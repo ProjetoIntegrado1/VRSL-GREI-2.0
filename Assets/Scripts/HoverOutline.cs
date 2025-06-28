@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems; // se quiser filtrar UI
 using UnityEngine.UI;
+using static MenuSystem;
 
 [RequireComponent(typeof(Collider))]
 public class HoverOutline : MonoBehaviour
@@ -45,6 +46,13 @@ public class HoverOutline : MonoBehaviour
 
     private void Update()
     {
+        // -1) Verifica se está no estado crosshair
+        if (menuSystem.currentState != MenuState.Crosshair)
+        {
+            ClearCurrent();
+            return;
+        }
+            
         // 0) Verifica se há uma câmera principal antes de tudo
         if (Camera.main == null)
         {

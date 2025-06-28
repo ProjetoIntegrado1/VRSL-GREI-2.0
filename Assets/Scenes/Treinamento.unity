@@ -289596,6 +289596,7 @@ MonoBehaviour:
   diagramaMenu: {fileID: 319225364}
   crosshair: {fileID: 575347170}
   fpsController: {fileID: 527258194}
+  currentState: 0
   allOutlinesEnabled: 0
 --- !u!82 &1364892270
 AudioSource:

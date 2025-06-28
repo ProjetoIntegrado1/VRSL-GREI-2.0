@@ -18,7 +18,7 @@ public class MenuSystem : MonoBehaviour
     public FirstPersonController fpsController;
 
     private AudioSource audioSource;
-    private MenuState currentState = MenuState.Crosshair;
+    public MenuState currentState = MenuState.Crosshair;
 
     public bool allOutlinesEnabled = false;
 
