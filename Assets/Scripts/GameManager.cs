@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         const string targetScene = "Treinamento";
         pendingPosition = new Vector3(40.04f, 0.99f, 24.56f);
-        pendingRotation = Quaternion.Euler(0f, -98.043f, 0f);
+        pendingRotation = Quaternion.Euler(0f, -105f, 0f);
 
         if (SceneManager.GetActiveScene().name == targetScene)
         {

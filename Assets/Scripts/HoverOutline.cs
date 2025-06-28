@@ -78,7 +78,7 @@ public class HoverOutline : MonoBehaviour
                 // clique
                 if (Input.GetMouseButtonDown(0) && currentHovered == this || Input.GetKeyDown(KeyCode.E) && currentHovered == this)
                 {
-                    menuSystem.OpenMenu(canvasDoObjeto, true);
+                    menuSystem.OpenMenu(canvasDoObjeto, isTablet: false);
                 }
 
                 return;
