@@ -168,7 +168,7 @@ public class MenuSystem : MonoBehaviour
         foreach (var o in outlines) o.enabled = allOutlinesEnabled;
     }
 
-    // ===== Funções públicas para botões UI =====
+    // funções públicas para botões
     public void SetStateCrosshair()
     {
         CloseAllMenus();
