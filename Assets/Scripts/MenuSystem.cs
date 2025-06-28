@@ -55,6 +55,8 @@ public class MenuSystem : MonoBehaviour
             PlayButtonSound();
             if (diagramaMenu != null && diagramaMenu.activeSelf)
                 CloseMenu(diagramaMenu);
+            else if (IsMenusOpen())
+                CloseAllMenus();
             else
                 OpenMenu(diagramaMenu, false);
         }

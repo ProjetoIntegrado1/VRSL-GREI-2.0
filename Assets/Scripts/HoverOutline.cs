@@ -17,7 +17,7 @@ public class HoverOutline : MonoBehaviour
         // Garantir Outline
         outline = GetComponent<Outline>() ?? gameObject.AddComponent<Outline>();
         outline.OutlineColor = Color.yellow;
-        outline.OutlineWidth = 10f;
+        outline.OutlineWidth = 7f;
         outline.enabled = false;
 
         // pegar o menuSystem
