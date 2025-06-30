@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Menu_Principal_Gerenciamento : MonoBehaviour
 {
     [SerializeField]   private string nomeDoLevelDeJogo = "Treinamento";
+    [SerializeField] private string nomeDoMainMenu = "Menu";
     public GameObject jogador;
 
     public void Jogar()
@@ -12,11 +13,15 @@ public class Menu_Principal_Gerenciamento : MonoBehaviour
         SceneManager.LoadScene(nomeDoLevelDeJogo);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(nomeDoMainMenu);
+    }
+
     public void SairDoJogo()
     {
         Debug.Log("Sair do jogo");
         Application.Quit();
-
     }
 
     public void IrParaNotebook()

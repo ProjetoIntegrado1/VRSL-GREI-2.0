@@ -6,18 +6,21 @@ using System.Collections;
 public class MenuSystem : MonoBehaviour
 {
     public enum MenuState { Crosshair, TabletMenu, OtherMenu }
-    
+
     [Header("Configurações Principais")]
     public KeyCode pauseKey = KeyCode.Escape;
     public AudioClip buttonSound;
     public GameObject pauseMenu;
+    public GameObject diagramaMenu;
     public GameObject crosshair;
 
     [Header("Referências")]
     public FirstPersonController fpsController;
 
     private AudioSource audioSource;
-    private MenuState currentState = MenuState.Crosshair;
+    public MenuState currentState = MenuState.Crosshair;
+
+    public bool allOutlinesEnabled = false;
 
     void Awake()
     {
@@ -25,34 +28,12 @@ public class MenuSystem : MonoBehaviour
         audioSource.playOnAwake = false;
         audioSource.loop = false;
 
-        // Fecha todos os menus (qualquer objeto com tag "Menu") no início
-        GameObject[] taggedMenus = GameObject.FindGameObjectsWithTag("Menu");
-        foreach (GameObject m in taggedMenus)
-        {
-            if (m.activeSelf)
-                m.SetActive(false);
-        }
-
-        // Garante que o pauseMenu comece inativo (caso não tenha tag "Menu")
-        if (pauseMenu != null && pauseMenu.activeSelf)
-            pauseMenu.SetActive(false);
-
-        // Desliga todas as câmeras com tag "Cameras" no início
-        GameObject[] cameras = GameObject.FindGameObjectsWithTag("Cameras");
-        foreach (GameObject cam in cameras)
-        {
-            if (cam.activeSelf)
-                cam.SetActive(false);
-        }
-
-        // Reativa o FPSController (caso tenha sido desativado)
-        if (fpsController != null && !fpsController.gameObject.activeSelf)
-            fpsController.gameObject.SetActive(true);
-
-        // Deixa apenas a crosshair ativa e trava cursor
-        if (crosshair != null)
-            crosshair.SetActive(true);
-
+        foreach (var m in GameObject.FindGameObjectsWithTag("Menu")) m.SetActive(false);
+        if (pauseMenu != null) pauseMenu.SetActive(false);
+        if (diagramaMenu != null) diagramaMenu.SetActive(false);
+        foreach (var cam in GameObject.FindGameObjectsWithTag("Cameras")) cam.SetActive(false);
+        if (fpsController != null) fpsController.gameObject.SetActive(true);
+        if (crosshair != null) crosshair.SetActive(true);
         LockCursor(true);
     }
 
@@ -61,84 +42,88 @@ public class MenuSystem : MonoBehaviour
         if (Input.GetKeyDown(pauseKey))
         {
             PlayButtonSound();
+            if (pauseMenu != null && pauseMenu.activeSelf)
+                CloseMenu(pauseMenu);
+            else if (IsMenusOpen())
+                CloseAllMenus();
+            else
+                OpenMenu(pauseMenu, true);
+        }
 
-            if (IsMenusOpen())
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            PlayButtonSound();
+            if (diagramaMenu != null && diagramaMenu.activeSelf)
+                CloseMenu(diagramaMenu);
+            else if (IsMenusOpen())
             {
                 CloseAllMenus();
+                OpenMenu(diagramaMenu, false);
             }
-            else if (currentState == MenuState.Crosshair)
-            {
-                OpenMenu(pauseMenu, true);
-            }
+            else
+                OpenMenu(diagramaMenu, false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+            ToggleAllOutlines();
+
+        // Alt ou botão direito: somente no estado Crosshair
+        HandleAltRightToggle();
+
+        if (crosshair != null)
+        {
+            bool anyOpen = IsMenusOpen();
+            crosshair.SetActive(!anyOpen || currentState == MenuState.TabletMenu);
         }
     }
 
-    public void OpenMenu(GameObject menu, bool pausar)
+    public void OpenMenu(GameObject menu, bool isTablet)
     {
         if (menu == null) return;
-
         menu.SetActive(true);
+        PauseGame();
+        currentState = isTablet ? MenuState.TabletMenu : MenuState.OtherMenu;
+    }
 
-        if (pausar)
+    private void CloseMenu(GameObject menu)
+    {
+        if (menu == null) return;
+        menu.SetActive(false);
+        ResumeGame();
+    }
+
+    private void HandleAltRightToggle()
+    {
+        // só funciona em estado Crosshair
+        if (currentState != MenuState.Crosshair)
+            return;
+
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            PauseGame();
-            currentState = MenuState.TabletMenu;
-        }
-        else
-        {
-            currentState = MenuState.OtherMenu;
-            LockCursor(false);
+            PlayButtonSound();
+            if (Time.timeScale == 0f)
+                ResumeGame();
+            else
+                PauseGame();
         }
     }
 
     public void CloseAllMenus()
     {
-        // 1) Fecha todos os objetos ativos com tag "Menu"
-        GameObject[] taggedMenus = GameObject.FindGameObjectsWithTag("Menu");
-        foreach (GameObject m in taggedMenus)
-        {
-            if (m.activeSelf)
-                m.SetActive(false);
-        }
-
-        // 2) Garante que o pauseMenu seja fechado também
-        if (pauseMenu != null && pauseMenu.activeSelf)
-            pauseMenu.SetActive(false);
-
-        // 3) Desliga todas as câmeras com tag "Cameras"
-        GameObject[] cameras = GameObject.FindGameObjectsWithTag("Cameras");
-        foreach (GameObject cam in cameras)
-        {
-            if (cam.activeSelf)
-                cam.SetActive(false);
-        }
-
-        // 4) Reativa o FPSController (caso tenha sido desativado por algum menu)
-        if (fpsController != null && !fpsController.gameObject.activeSelf)
-            fpsController.gameObject.SetActive(true);
-
-        // 5) Deixa a crosshair ativa
-        if (crosshair != null)
-            crosshair.SetActive(true);
-
-        // 6) Inicia coroutine para re-travar o cursor no próximo frame
+        foreach (var m in GameObject.FindGameObjectsWithTag("Menu")) m.SetActive(false);
+        if (pauseMenu != null) pauseMenu.SetActive(false);
+        if (diagramaMenu != null) diagramaMenu.SetActive(false);
+        foreach (var cam in GameObject.FindGameObjectsWithTag("Cameras")) cam.SetActive(false);
+        if (fpsController != null) fpsController.gameObject.SetActive(true);
         ResumeGame();
     }
 
     public bool IsMenusOpen()
     {
-        // Se qualquer objeto com tag "Menu" estiver ativo, retorna true
-        GameObject[] taggedMenus = GameObject.FindGameObjectsWithTag("Menu");
-        foreach (GameObject m in taggedMenus)
-        {
-            if (m.activeSelf)
-                return true;
-        }
-
-        // Também verifica pauseMenu
-        if (pauseMenu != null && pauseMenu.activeSelf)
-            return true;
-
+        foreach (var m in GameObject.FindGameObjectsWithTag("Menu"))
+            if (m.activeSelf) return true;
+        if (pauseMenu != null && pauseMenu.activeSelf) return true;
+        if (diagramaMenu != null && diagramaMenu.activeSelf) return true;
         return false;
     }
 
@@ -150,27 +135,24 @@ public class MenuSystem : MonoBehaviour
 
     private void PauseGame()
     {
-        Time.timeScale = 0;
-        
+        Time.timeScale = 0f;
         if (fpsController != null)
         {
             fpsController.m_MouseLook.SetCursorLock(false);
-            fpsController.m_MouseLook.XSensitivity = 0;
-            fpsController.m_MouseLook.YSensitivity = 0;
+            fpsController.m_MouseLook.XSensitivity = 0f;
+            fpsController.m_MouseLook.YSensitivity = 0f;
         }
         LockCursor(false);
     }
 
     private void ResumeGame()
     {
-
-        Time.timeScale = 1;
-        
+        Time.timeScale = 1f;
         if (fpsController != null)
         {
             fpsController.m_MouseLook.SetCursorLock(true);
-            fpsController.m_MouseLook.XSensitivity = 2;
-            fpsController.m_MouseLook.YSensitivity = 2;
+            fpsController.m_MouseLook.XSensitivity = 2f;
+            fpsController.m_MouseLook.YSensitivity = 2f;
         }
         LockCursor(true);
         currentState = MenuState.Crosshair;
@@ -180,5 +162,38 @@ public class MenuSystem : MonoBehaviour
     {
         Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !locked;
+    }
+
+    public void ToggleAllOutlines()
+    {
+        var outlines = FindObjectsOfType<Outline>();
+        allOutlinesEnabled = !allOutlinesEnabled;
+        foreach (var o in outlines) o.enabled = allOutlinesEnabled;
+    }
+
+    // funções públicas para botões
+    public void SetStateCrosshair()
+    {
+        CloseAllMenus();
+    }
+
+    public void SetStateTabletMenu()
+    {
+        PlayButtonSound();
+        if (pauseMenu != null)
+        {
+            CloseAllMenus();
+            OpenMenu(pauseMenu, true);
+        }
+    }
+
+    public void SetStateOtherMenu(GameObject menu)
+    {
+        PlayButtonSound();
+        if (menu != null)
+        {
+            CloseAllMenus();
+            OpenMenu(menu, false);
+        }
     }
 }
