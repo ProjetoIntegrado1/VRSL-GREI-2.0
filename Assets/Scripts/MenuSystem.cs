@@ -56,7 +56,10 @@ public class MenuSystem : MonoBehaviour
             if (diagramaMenu != null && diagramaMenu.activeSelf)
                 CloseMenu(diagramaMenu);
             else if (IsMenusOpen())
+            {
                 CloseAllMenus();
+                OpenMenu(diagramaMenu, false);
+            }
             else
                 OpenMenu(diagramaMenu, false);
         }
