@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 1875852}
   m_Layer: 5
   m_Name: Guide (1)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145027,7 +145027,7 @@ GameObject:
   - component: {fileID: 898871474}
   m_Layer: 5
   m_Name: Guide (4)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206960,7 +206960,7 @@ GameObject:
   - component: {fileID: 1075985722}
   m_Layer: 5
   m_Name: Guide (9)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220140,7 +220140,7 @@ GameObject:
   - component: {fileID: 1166852996}
   m_Layer: 5
   m_Name: Guide (10)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263437,7 +263437,7 @@ GameObject:
   - component: {fileID: 1203774734}
   m_Layer: 5
   m_Name: Guide (5)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278694,7 +278694,7 @@ GameObject:
   - component: {fileID: 1282465923}
   m_Layer: 5
   m_Name: Guide (7)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280443,7 +280443,7 @@ GameObject:
   - component: {fileID: 1304069162}
   m_Layer: 5
   m_Name: Guide (8)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318604,7 +318604,7 @@ GameObject:
   - component: {fileID: 1563577396}
   m_Layer: 5
   m_Name: Guide (2)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340604,7 +340604,7 @@ GameObject:
   - component: {fileID: 1744172232}
   m_Layer: 5
   m_Name: Guide (11)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354236,7 +354236,7 @@ GameObject:
   - component: {fileID: 1848538207}
   m_Layer: 5
   m_Name: Guide (3)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388016,7 +388016,7 @@ GameObject:
   - component: {fileID: 2061846213}
   m_Layer: 5
   m_Name: Guide (6)
-  m_TagString: Menu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
