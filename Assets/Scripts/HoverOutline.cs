@@ -87,6 +87,16 @@ public class HoverOutline : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) && currentHovered == this || Input.GetKeyDown(KeyCode.E) && currentHovered == this)
                 {
                     menuSystem.OpenMenu(canvasDoObjeto, isTablet: false);
+
+                    var missionManager = FindObjectOfType<MissionManager>();
+                    if (missionManager != null)
+                    {
+                        // Verifica se este objeto é o alvo da missão atual
+                        if (missionManager.IsCurrentMissionTarget(gameObject))
+                        {
+                            missionManager.CompleteMissionByTarget(gameObject);
+                        }
+                    }
                 }
 
                 return;

@@ -67,7 +67,7 @@ public class MenuSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
             ToggleAllOutlines();
 
-        // Alt ou botão direito: somente no estado Crosshair
+        // alt ou botão direito somente no estado Crosshair
         HandleAltRightToggle();
 
         if (crosshair != null)
