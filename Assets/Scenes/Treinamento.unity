@@ -69661,6 +69661,7 @@ GameObject:
   - component: {fileID: 373307367}
   - component: {fileID: 373307369}
   - component: {fileID: 373307368}
+  - component: {fileID: 373307370}
   m_Layer: 0
   m_Name: Substation_69 kV
   m_TagString: Untagged
@@ -69743,6 +69744,27 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!65 &373307370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373307366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 18.3, y: 5.26, z: 10.01}
+  m_Center: {x: 8.9, y: 2.62, z: 4.98}
 --- !u!1001 &373542527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110687,6 +110709,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: c52f6e91b17e90b42862def9bc1cc259, type: 3}
       insertIndex: -1
       addedObject: {fileID: 622975954}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: c52f6e91b17e90b42862def9bc1cc259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622975961}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: c52f6e91b17e90b42862def9bc1cc259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622975962}
     - targetCorrespondingSourceObject: {fileID: 8051415255134806348, guid: c52f6e91b17e90b42862def9bc1cc259, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1270861366}
@@ -110827,6 +110855,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.1422234, y: 2.8216367, z: 0.15603998}
   m_Center: {x: -0.0034232372, y: 1.544284, z: 5.073154}
+--- !u!65 &622975961
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622975952}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.7, y: 2.77, z: 30.35}
+  m_Center: {x: -0.4, y: 1.19, z: 0}
+--- !u!114 &622975962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622975952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3f48f93f0186846915923aaa32d806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &624242494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115149,6 +115210,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1958199096}
+        m_TargetAssemblyTypeName: MissionManager, Assembly-CSharp
+        m_MethodName: CompleteSpecificMission
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -126456,6 +126529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738005750}
   - component: {fileID: 738005749}
+  - component: {fileID: 738005751}
   m_Layer: 0
   m_Name: TriggerCasa
   m_TagString: Untagged
@@ -126499,6 +126573,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402265371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &738005751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738005748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3f48f93f0186846915923aaa32d806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &738034171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145306,6 +145392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899162381}
   - component: {fileID: 899162380}
+  - component: {fileID: 899162382}
   m_Layer: 0
   m_Name: TriggerBateria
   m_TagString: Untagged
@@ -145349,6 +145436,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402265371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899162382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899162379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3f48f93f0186846915923aaa32d806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &900165995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297797,6 +297896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414565435}
   - component: {fileID: 1414565434}
+  - component: {fileID: 1414565436}
   m_Layer: 0
   m_Name: TriggerPatio
   m_TagString: Untagged
@@ -297840,6 +297940,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402265371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414565436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414565433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3f48f93f0186846915923aaa32d806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415710684
 GameObject:
   m_ObjectHideFlags: 0
@@ -368742,6 +368854,7 @@ GameObject:
   - component: {fileID: 1938608919}
   - component: {fileID: 1938608921}
   - component: {fileID: 1938608920}
+  - component: {fileID: 1938608922}
   m_Layer: 0
   m_Name: Substation_13,8 kV
   m_TagString: Untagged
@@ -368824,6 +368937,27 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!65 &1938608922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938608918}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.37, y: 5.26, z: 9.75}
+  m_Center: {x: 4.92, y: 2.62, z: 4.95}
 --- !u!4 &1940262459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7486cc55f7cedbe46a4e4f8df3bcc73a, type: 3}
@@ -372540,22 +372674,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missions:
-  - description: Chegue perto do drone
+  - description: "Visite a CASA DE MEDI\xC7\xC3O"
     isCompleted: 0
     type: 0
-    target: {fileID: 462108848}
-  - description: Clique no notebook
+    target: {fileID: 622975952}
+  - description: "Visite e interaja com os P\xC1TIOS da subesta\xE7\xE3o"
     isCompleted: 0
-    type: 1
-    target: {fileID: 2100917893}
-  - description: Acesse o diagrama unifilar
+    type: 0
+    target: {fileID: 1414565433}
+  - description: Visite a CASA DE COMANDO, observe e interaja com os seus componentes
     isCompleted: 0
-    type: 2
+    type: 0
+    target: {fileID: 738005748}
+  - description: "Interaja com o SISTEMA SCADA, no computador que est\xE1 na CASA
+      DE COMANDO"
+    isCompleted: 0
+    type: 0
     target: {fileID: 0}
-  - description: Chegue perto do drone de novo!
+  - description: Visite a SALA DE BATERIAS
     isCompleted: 0
     type: 0
-    target: {fileID: 462108848}
+    target: {fileID: 899162379}
   missionText: {fileID: 2100074309}
   checkBox: {fileID: 1489743848}
   allMissionsContainer: {fileID: 1333493157}
@@ -375229,6 +375368,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1958199096}
+        m_TargetAssemblyTypeName: MissionManager, Assembly-CSharp
+        m_MethodName: CompleteSpecificMission
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
