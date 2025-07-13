@@ -372689,7 +372689,7 @@ MonoBehaviour:
   - description: "Interaja com o SISTEMA SCADA, no computador que est\xE1 na CASA
       DE COMANDO"
     isCompleted: 0
-    type: 0
+    type: 2
     target: {fileID: 0}
   - description: Visite a SALA DE BATERIAS
     isCompleted: 0
