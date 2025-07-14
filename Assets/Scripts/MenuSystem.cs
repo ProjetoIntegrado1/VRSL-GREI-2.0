@@ -94,7 +94,7 @@ public class MenuSystem : MonoBehaviour
 
         if (crosshair != null)
         {
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
             bool anyOpen = IsMenusOpen();
             crosshair.SetActive(!anyOpen || currentState == MenuState.TabletMenu);
         }
