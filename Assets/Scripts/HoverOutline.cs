@@ -62,13 +62,7 @@ public class HoverOutline : MonoBehaviour
 
     private void Update()
     {
-        if (menuSystem.currentState != MenuState.Crosshair)
-        {
-            ClearCurrent();
-            return;
-        }
-
-        if (Camera.main == null)
+        if (menuSystem.currentState != MenuState.Crosshair && menuSystem.currentState != MenuState.Interaction)
         {
             ClearCurrent();
             return;
@@ -80,7 +74,15 @@ public class HoverOutline : MonoBehaviour
             return;
         }
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Camera cam = GetCamera();
+        if (cam == null)
+        {
+            ClearCurrent();
+            return;
+        }
+
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
         if (Physics.Raycast(ray, out var hit, 100f, interactiveMask))
         {
             HoverOutline hov = hit.collider.GetComponentInParent<HoverOutline>();
@@ -104,6 +106,7 @@ public class HoverOutline : MonoBehaviour
 
                 return;
             }
+        
         }
 
         ClearCurrent();
@@ -123,5 +126,26 @@ public class HoverOutline : MonoBehaviour
     {
         if (col != null && !interactiveColliders.Contains(col))
             interactiveColliders.Add(col);
+    }
+
+    private Camera GetCamera()
+    {
+        var validCams = new List<Camera>();
+        foreach (var c in Camera.allCameras)
+        {
+            if (!c.enabled || !c.gameObject.activeInHierarchy)
+                continue;
+            if (!c.pixelRect.Contains(Input.mousePosition))
+                continue;
+            validCams.Add(c);
+        }
+
+        if (validCams.Count == 1)
+            return validCams[0];
+
+        if (validCams.Count >= 2)
+            return validCams[1];
+
+        return null;
     }
 }
