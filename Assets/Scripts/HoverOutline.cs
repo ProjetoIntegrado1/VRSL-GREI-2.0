@@ -1,20 +1,28 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems; // se quiser filtrar UI
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using static MenuSystem;
 
-[RequireComponent(typeof(Collider))]
 public class HoverOutline : MonoBehaviour
 {
-    private static HoverOutline currentHovered; // quem está com outline agora
+    private static HoverOutline currentHovered;
+    public static HoverOutline CurrentHovered => currentHovered;
+
     private Outline outline;
-    [Header("Canva a abrir ao clicar")]
+
+    [SerializeField]
+    private List<Collider> interactiveColliders = new List<Collider>();
+
+    [Header("Canvas a abrir ao clicar")]
     public GameObject canvasDoObjeto;
+
     private MenuSystem menuSystem;
+
+    private int interactiveMask = 1 << 6;
 
     private void Awake()
     {
-        // Garantir Outline
+        // garantir Outline
         outline = GetComponent<Outline>() ?? gameObject.AddComponent<Outline>();
         outline.OutlineColor = Color.yellow;
         outline.OutlineWidth = 7f;
@@ -23,15 +31,15 @@ public class HoverOutline : MonoBehaviour
         // pegar o menuSystem
         menuSystem = FindObjectOfType<MenuSystem>();
         if (menuSystem == null)
-            Debug.LogError("Não encontrei nenhum MenuSystem na cena!");
+            Debug.LogError($"[{nameof(HoverOutline)}] Não encontrei nenhum MenuSystem na cena!", this);
 
-        // Se for mesh estático, usar MeshCollider para cobertura exata:
+        // se for mesh estático, usar MeshCollider para cobertura exata:
         if (GetComponent<MeshFilter>() != null && GetComponent<MeshCollider>() == null)
         {
             var meshCol = gameObject.AddComponent<MeshCollider>();
-            meshCol.convex = false; // ou true, dependendo do uso
+            meshCol.convex = false;
         }
-        // Senão, ajusta um BoxCollider aos bounds do MeshRenderer
+        // ajusta um BoxCollider aos bounds do MeshRenderer
         else if (GetComponent<Collider>() == null)
         {
             var mr = GetComponent<MeshRenderer>();
@@ -42,40 +50,44 @@ public class HoverOutline : MonoBehaviour
                 bc.size = mr.bounds.size;
             }
         }
+
+        // inclui todos os colliders deste GameObject
+        foreach (var col in GetComponents<Collider>())
+            if (!interactiveColliders.Contains(col))
+                interactiveColliders.Add(col);
+
+        if (interactiveColliders.Count == 0)
+            Debug.LogWarning($"[{nameof(HoverOutline)}] Não há colliders para interagir.", this);
     }
 
     private void Update()
     {
-        // -1) Verifica se está no estado crosshair
-        if (menuSystem.currentState != MenuState.Crosshair)
-        {
-            ClearCurrent();
-            return;
-        }
-            
-        // 0) Verifica se há uma câmera principal antes de tudo
-        if (Camera.main == null)
+        if (menuSystem.currentState != MenuState.Crosshair && menuSystem.currentState != MenuState.Interaction)
         {
             ClearCurrent();
             return;
         }
 
-        // 1) Raycast só dispara se o ponteiro não estiver sobre UI
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         {
             ClearCurrent();
             return;
         }
 
-        // 2) Raycast da câmera principal
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        int interactiveMask = 1 << 6;
+        Camera cam = GetCamera();
+        if (cam == null)
+        {
+            ClearCurrent();
+            return;
+        }
+
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
         if (Physics.Raycast(ray, out var hit, 100f, interactiveMask))
         {
-            var hov = hit.collider.GetComponent<HoverOutline>();
+            HoverOutline hov = hit.collider.GetComponentInParent<HoverOutline>();
             if (hov != null)
             {
-                // se mudou de alvo, limpa o anterior
                 if (currentHovered != hov)
                 {
                     ClearCurrent();
@@ -83,18 +95,22 @@ public class HoverOutline : MonoBehaviour
                     currentHovered.outline.enabled = true;
                 }
 
-                // clique
-                if (Input.GetMouseButtonDown(0) && currentHovered == this || Input.GetKeyDown(KeyCode.E) && currentHovered == this)
+                if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)) && currentHovered == this)
                 {
                     menuSystem.OpenMenu(canvasDoObjeto, isTablet: false);
+
+                    var missionManager = FindObjectOfType<MissionManager>();
+                    if (missionManager != null && missionManager.IsCurrentMissionTarget(gameObject))
+                        missionManager.CompleteMissionByTarget(gameObject);
                 }
 
                 return;
             }
+        
         }
 
-        // se não acertou nada ou não é interativo, limpa
         ClearCurrent();
+        currentHovered = null;
     }
 
     private void ClearCurrent()
@@ -104,5 +120,32 @@ public class HoverOutline : MonoBehaviour
             currentHovered.outline.enabled = false;
             currentHovered = null;
         }
+    }
+
+    public void AddInteractiveCollider(Collider col)
+    {
+        if (col != null && !interactiveColliders.Contains(col))
+            interactiveColliders.Add(col);
+    }
+
+    private Camera GetCamera()
+    {
+        var validCams = new List<Camera>();
+        foreach (var c in Camera.allCameras)
+        {
+            if (!c.enabled || !c.gameObject.activeInHierarchy)
+                continue;
+            if (!c.pixelRect.Contains(Input.mousePosition))
+                continue;
+            validCams.Add(c);
+        }
+
+        if (validCams.Count == 1)
+            return validCams[0];
+
+        if (validCams.Count >= 2)
+            return validCams[1];
+
+        return null;
     }
 }
