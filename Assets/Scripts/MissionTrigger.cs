@@ -11,7 +11,10 @@ public class MissionTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-            missionManager.CompleteMissionByTarget(gameObject);
+        if (!other.CompareTag("Player")) return;
+        
+        int idx = missionManager.missions.FindIndex(m => m.target == gameObject);
+        if (idx != -1)
+            missionManager.CompleteSpecificMission(idx);
     }
 }
