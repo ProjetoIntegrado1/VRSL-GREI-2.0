@@ -100,11 +100,10 @@ public class MissionManager : MonoBehaviour
         if (index < 0 || index >= missions.Count) return;
         if (missions[index].isCompleted) return;
 
-        missions[index].isCompleted = true;
-        UpdateEntryInPanels(index);
-
         if (index == currentIndex)
         {
+            missions[index].isCompleted = true;
+            UpdateEntryInPanels(index);
             suppressToggleCallback = true;
             checkBox.isOn = true;
             suppressToggleCallback = false;
