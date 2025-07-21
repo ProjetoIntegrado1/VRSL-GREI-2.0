@@ -37372,7 +37372,7 @@ MonoBehaviour:
   m_text: "O que \xE9 um transformador auxiliar?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
-  m_sharedMaterial: {fileID: -467990933380936886, guid: c5c9b38c62fd85e46821aef618886063, type: 2}
+  m_sharedMaterial: {fileID: 7104904325371096647, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58906,7 +58906,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 2b9c440dc8ac3d147ba41ada81af46c3, type: 3}
 --- !u!4 &283443903 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2b9c440dc8ac3d147ba41ada81af46c3, type: 3}
+  m_CorrespondingSourceObject: {fileID: -9172416932174077832, guid: 2b9c440dc8ac3d147ba41ada81af46c3, type: 3}
   m_PrefabInstance: {fileID: 283443902}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &283842147
@@ -116900,7 +116900,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 668424823}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.8153
+  m_Size: 0.8152999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -120116,7 +120116,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 435, y: 0.0000038146973}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 16, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689736947
 MonoBehaviour:
@@ -120187,15 +120187,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8773585, g: 0.36832502, b: 0.36832502, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 05da89e83e918cc4db8ff46c30f955c8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -126048,7 +126048,7 @@ MonoBehaviour:
   m_text: "O que \xE9 um transformador de corrente?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
-  m_sharedMaterial: {fileID: -467990933380936886, guid: c5c9b38c62fd85e46821aef618886063, type: 2}
+  m_sharedMaterial: {fileID: 7104904325371096647, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -147135,7 +147135,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 624631889}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -189851,7 +189851,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &958231284 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1cc099534e54fbb4e963450fb8b60763, type: 3}
+  m_CorrespondingSourceObject: {fileID: -7117302697841357167, guid: 1cc099534e54fbb4e963450fb8b60763, type: 3}
   m_PrefabInstance: {fileID: 958231282}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &959581462
@@ -204608,7 +204608,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 435, y: 0.0000038146973}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 16, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057588408
 MonoBehaviour:
@@ -204679,15 +204679,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8773585, g: 0.36832502, b: 0.36832502, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 05da89e83e918cc4db8ff46c30f955c8, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -207674,8 +207674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350.5, y: -45.000015}
-  m_SizeDelta: {x: 580, y: 626}
+  m_AnchoredPosition: {x: -350.5, y: -47.078}
+  m_SizeDelta: {x: 580, y: 637.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081317519
 MonoBehaviour:
@@ -208874,7 +208874,7 @@ MonoBehaviour:
   m_text: "O que \xE9 uma selecionadora?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
-  m_sharedMaterial: {fileID: -467990933380936886, guid: c5c9b38c62fd85e46821aef618886063, type: 2}
+  m_sharedMaterial: {fileID: 7104904325371096647, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -294743,7 +294743,7 @@ MonoBehaviour:
   m_text: "O que \xE9 um transformador abaixador?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
-  m_sharedMaterial: {fileID: -467990933380936886, guid: c5c9b38c62fd85e46821aef618886063, type: 2}
+  m_sharedMaterial: {fileID: 7104904325371096647, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -315230,7 +315230,7 @@ MonoBehaviour:
   m_text: "O que \xE9 um dijuntor de alta tens\xE3o?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
-  m_sharedMaterial: {fileID: -467990933380936886, guid: c5c9b38c62fd85e46821aef618886063, type: 2}
+  m_sharedMaterial: {fileID: 7104904325371096647, guid: 5e4c30fd618fbb74082ae597d47856e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -333467,8 +333467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350.5, y: -45.000015}
-  m_SizeDelta: {x: 580, y: 626}
+  m_AnchoredPosition: {x: -350.5, y: -47.697}
+  m_SizeDelta: {x: 580, y: 636.343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688143966
 MonoBehaviour:
