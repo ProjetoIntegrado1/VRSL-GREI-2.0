@@ -217,4 +217,49 @@ public class MenuSystem : MonoBehaviour
         allOutlinesEnabled = !allOutlinesEnabled;
         foreach (var o in outlines) o.enabled = allOutlinesEnabled;
     }
+
+    // funções publicas para botões
+    public void SetStateCrosshair()
+    {
+        CloseAllMenus();
+    }
+
+    public void SetStateTabletMenu()
+    {
+        PlayButtonSound();
+        if (pauseMenu != null)
+        {
+            CloseAllMenus();
+            OpenMenu(pauseMenu, true);
+        }
+    }
+
+    public void SetStateOtherMenu(GameObject menu)
+    {
+        PlayButtonSound();
+        if (menu != null)
+        {
+            CloseAllMenus();
+            OpenMenu(menu, false);
+        }
+    }
+
+    public void ButtonCloseOrAllClose(GameObject objToClose)
+    {
+        var cams = GameObject.FindGameObjectsWithTag("Cameras");
+        int activeCount = 0;
+        foreach (var cam in cams)
+            if (cam.activeSelf) activeCount++;
+
+        Debug.Log(activeCount);
+
+        if (activeCount > 0)
+        {
+            objToClose?.SetActive(false);
+        }
+        else
+        {
+            CloseAllMenus();
+        }
+    }
 }
