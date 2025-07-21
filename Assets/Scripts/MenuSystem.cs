@@ -87,7 +87,7 @@ public class MenuSystem : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.Q))
             ToggleAllOutlines();
 
         HandleAltRightToggle();
@@ -262,4 +262,8 @@ public class MenuSystem : MonoBehaviour
             CloseAllMenus();
         }
     }
+
+    public void OnBtnIrParaPatio() => GameManager.Instance.IrParaPatio();
+    public void OnBtnIrParaNotebook() => GameManager.Instance.IrParaNotebook();
+    public void OnBtnIrParaTransformador() => GameManager.Instance.IrParaTransformador();
 }

@@ -5,18 +5,11 @@ using System.Collections.Generic;
 
 public class MissionManager : MonoBehaviour
 {
-    [Header("Configurações de Missões")]
     public List<Mission> missions = new List<Mission>();
-
-    [Header("Viewport A")]
     public Transform missionsContainerA;
     public GameObject missionEntryPrefabA;
-
-    [Header("Viewport B")]
     public Transform missionsContainerB;
     public GameObject missionEntryPrefabB;
-
-    [Header("UI da Missão Atual")]
     public TextMeshProUGUI missionText;
     public Toggle checkBox;
 
@@ -26,7 +19,6 @@ public class MissionManager : MonoBehaviour
     void Start()
     {
         checkBox.onValueChanged.AddListener(OnCheckBoxChanged);
-
         if (missions.Count > 0)
         {
             SkipCompletedMissions();
@@ -44,31 +36,8 @@ public class MissionManager : MonoBehaviour
             suppressToggleCallback = true;
             missionText.text = m.description;
             checkBox.isOn = m.isCompleted;
+            checkBox.interactable = !m.isCompleted;
             suppressToggleCallback = false;
-        }
-    }
-
-    public void OnCheckBoxChanged(bool value)
-    {
-        if (suppressToggleCallback || !value) return;
-        CompleteCurrentMission();
-    }
-
-    private void CompleteCurrentMission()
-    {
-        missions[currentIndex].isCompleted = true;
-        UpdateEntryInPanels(currentIndex);
-        GoToNextMission();
-    }
-
-    void GoToNextMission()
-    {
-        currentIndex++;
-        SkipCompletedMissions();
-
-        if (currentIndex < missions.Count)
-        {
-            UpdateMissionUI();
         }
         else
         {
@@ -77,11 +46,35 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    private void SkipCompletedMissions()
+    void OnCheckBoxChanged(bool value)
     {
-        while (currentIndex < missions.Count && missions[currentIndex].isCompleted)
+        if (suppressToggleCallback || !value) return;
+        CompleteCurrentMission();
+    }
+
+    void CompleteCurrentMission()
+    {
+        missions[currentIndex].isCompleted = true;
+        UpdateEntryInPanels(currentIndex);
+        checkBox.interactable = false;
+        SkipCompletedMissions();
+        UpdateMissionUI();
+    }
+
+    public void CompleteSpecificMission(int index)
+    {
+        if (index < 0 || index >= missions.Count) return;
+        if (missions[index].isCompleted) return;
+        missions[index].isCompleted = true;
+        UpdateEntryInPanels(index);
+        if (index == currentIndex)
         {
-            currentIndex++;
+            suppressToggleCallback = true;
+            checkBox.isOn = true;
+            checkBox.interactable = false;
+            suppressToggleCallback = false;
+            SkipCompletedMissions();
+            UpdateMissionUI();
         }
     }
 
@@ -89,25 +82,9 @@ public class MissionManager : MonoBehaviour
     {
         if (currentIndex >= missions.Count) return;
         var current = missions[currentIndex];
-        if (current.target == target && !current.isCompleted)
+        if (current.type == Mission.MissionType.Interaction && current.target == target && !current.isCompleted)
         {
             CompleteCurrentMission();
-        }
-    }
-
-    public void CompleteSpecificMission(int index)
-    {
-        if (index < 0 || index >= missions.Count) return;
-        if (missions[index].isCompleted) return;
-
-        if (index == currentIndex)
-        {
-            missions[index].isCompleted = true;
-            UpdateEntryInPanels(index);
-            suppressToggleCallback = true;
-            checkBox.isOn = true;
-            suppressToggleCallback = false;
-            GoToNextMission();
         }
     }
 
@@ -121,9 +98,7 @@ public class MissionManager : MonoBehaviour
     void PopulateMissionsPanel(Transform container, GameObject prefab)
     {
         if (container == null || prefab == null) return;
-        foreach (Transform child in container)
-            Destroy(child.gameObject);
-
+        foreach (Transform child in container) Destroy(child.gameObject);
         for (int i = 0; i < missions.Count; i++)
         {
             int idx = i;
@@ -132,26 +107,31 @@ public class MissionManager : MonoBehaviour
             var toggle = entry.transform.Find("Toggle").GetComponent<Toggle>();
             text.text = missions[idx].description;
             toggle.isOn = missions[idx].isCompleted;
-            toggle.interactable = true;
-            toggle.onValueChanged.AddListener((val) => {
-                if (val) CompleteSpecificMission(idx);
-            });
+            toggle.interactable = !missions[idx].isCompleted;
+            toggle.onValueChanged.AddListener(val => { if (val) CompleteSpecificMission(idx); });
         }
     }
 
-    void UpdateEntryInPanels(int index)
-    {
-        UpdatePanelEntry(missionsContainerA, index);
-        UpdatePanelEntry(missionsContainerB, index);
-    }
-
-    void UpdatePanelEntry(Transform container, int index)
+    void UpdateEntryInPanels(Transform container, int index)
     {
         if (container == null || index < 0 || index >= container.childCount) return;
         var entry = container.GetChild(index);
         var toggle = entry.Find("Toggle").GetComponent<Toggle>();
         suppressToggleCallback = true;
         toggle.isOn = missions[index].isCompleted;
+        toggle.interactable = !missions[index].isCompleted;
         suppressToggleCallback = false;
+    }
+
+    void UpdateEntryInPanels(int index)
+    {
+        UpdateEntryInPanels(missionsContainerA, index);
+        UpdateEntryInPanels(missionsContainerB, index);
+    }
+
+    void SkipCompletedMissions()
+    {
+        int next = missions.FindIndex(m => !m.isCompleted);
+        currentIndex = next == -1 ? missions.Count : next;
     }
 }
