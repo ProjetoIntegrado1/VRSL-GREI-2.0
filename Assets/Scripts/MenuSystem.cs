@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 using System.Collections;
 
@@ -20,6 +21,10 @@ public class MenuSystem : MonoBehaviour
     private AudioSource audioSource;
     public MenuState currentState = MenuState.Crosshair;
 
+    [Header("Outline")]
+    public Image iconImage;     // O Image do seu botão
+    public Sprite spriteOn;     // Ícone quando a luz está acesa
+    public Sprite spriteOff;    // Ícone quando a luz está apagada
     public bool allOutlinesEnabled = false;
 
     void Awake()
@@ -216,6 +221,11 @@ public class MenuSystem : MonoBehaviour
         var outlines = FindObjectsOfType<Outline>();
         allOutlinesEnabled = !allOutlinesEnabled;
         foreach (var o in outlines) o.enabled = allOutlinesEnabled;
+        UpdateIcon();
+    }
+    private void UpdateIcon()
+    {
+        iconImage.sprite = allOutlinesEnabled ? spriteOn : spriteOff;
     }
 
     // funções publicas para botões

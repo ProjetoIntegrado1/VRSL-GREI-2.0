@@ -292269,6 +292269,9 @@ MonoBehaviour:
   crosshair: {fileID: 575347170}
   fpsController: {fileID: 527258194}
   currentState: 0
+  iconImage: {fileID: 1150853535}
+  spriteOn: {fileID: 21300000, guid: 0853089a5981bfe478a049e6de00e316, type: 3}
+  spriteOff: {fileID: 21300000, guid: c5c627bcb6ea92d40877e95fad2dd2b8, type: 3}
   allOutlinesEnabled: 0
 --- !u!82 &1364892270
 AudioSource:
