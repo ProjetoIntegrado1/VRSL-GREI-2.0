@@ -24,6 +24,7 @@ public class HoverOutline : MonoBehaviour
     {
         // garantir Outline
         outline = GetComponent<Outline>() ?? gameObject.AddComponent<Outline>();
+        outline.OutlineMode = Outline.Mode.OutlineVisible;
         outline.OutlineColor = Color.yellow;
         outline.OutlineWidth = 7f;
         outline.enabled = false;
