@@ -95,6 +95,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void IrParaTransformadorPatio()
+    {
+        const string targetScene = "Treinamento";
+        pendingPosition = new Vector3(18.2f, 0.99f, 22.8f);
+        pendingRotation = Quaternion.Euler(0f, -278f, 0f);
+
+        if (SceneManager.GetActiveScene().name == targetScene)
+        {
+            ApplyWarp();
+        }
+        else
+        {
+            SceneManager.LoadScene(targetScene);
+        }
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (!hasPendingWarp || scene.name != "Treinamento")
