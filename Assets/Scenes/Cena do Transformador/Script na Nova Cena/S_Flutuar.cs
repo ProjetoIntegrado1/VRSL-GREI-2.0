@@ -9,6 +9,7 @@ public class S_Flutuar : MonoBehaviour
 
     public GameObject Obj;
     public GameObject cube;
+    public float maxY = 3.4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class S_Flutuar : MonoBehaviour
     {
         cube.gameObject.transform.position = new Vector3(Obj.transform.position.x, cube.transform.position.y , Obj.transform.position.z);
 
-        if (Input.GetKey(KeyCode.U) && cube.transform.position.y < 3.4)
+        if (Input.GetKey(KeyCode.U) && cube.transform.position.y < maxY)
         
         {
 
