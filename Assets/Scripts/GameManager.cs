@@ -43,9 +43,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Inicia warp na próxima cena "Treinamento", sem afetar spawn inicial.
-    /// </summary>
     public void IrParaNotebook()
     {
         const string targetScene = "Treinamento";
@@ -116,7 +113,6 @@ public class GameManager : MonoBehaviour
         if (!hasPendingWarp || scene.name != "Treinamento")
             return;
 
-        // Invoca ApplyWarp no próximo frame
         Invoke(nameof(ApplyWarp), 0f);
         hasPendingWarp = false;
     }
