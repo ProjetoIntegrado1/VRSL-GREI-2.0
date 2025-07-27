@@ -106,7 +106,7 @@ git clone https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0
 
 Alguns arquivos não podem ser versionados diretamente no GitHub e estão disponíveis nos **Releases** do repositório:
 
-1. Acesse: [https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases](https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases)
+1. Acesse: [https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases/tag/Arquivos](https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases/tag/Arquivos)
 2. Faça o download dos arquivos.
 3. Copie cada arquivo para a pasta indicada dentro do diretório clonado (verifique o nome e caminho em cada release).
 
