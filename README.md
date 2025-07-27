@@ -19,6 +19,10 @@
 VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
 Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (GREI).
 
+<div align="center">
+  <img src="imagemExemplo.png" style="width: 800px;" />
+</div>
+
 <a name="membros"></a>
 
 ## Membros
