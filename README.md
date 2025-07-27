@@ -1,13 +1,47 @@
 # VRSL-GREI-2.0
 
+<h4>
+  Sumário: 
+ <a href="#sobre">Sobre</a> • 
+ <a href="#membros">Membros</a> • 
+ <a href="#license">Licença</a> • 
+ <a href="#requisitos">Requisitos</a> •
+ <a href="#tecnologias">Tecnologias</a> •
+ <a href="#guia-de-instalacao">Guia de instalação</a> •
+ <a href="#estrutura-de-pastas">Estrutura de pastas</a> •
+ <a href="#documento">Relatório e Apresentação</a> •
+ <a href="#executavel">Executável</a> •
+</h4>
+
+<a name="sobre"></a>
+
+## Sobre  
+VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
+Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (GREI).
+
+<div align="center">
+  <img src="imagemExemplo.png" style="width: 800px;" />
+</div>
+
+<a name="membros"></a>
+
 ## Membros
-**Antônio Lucas Vieira de Lima** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
-**Henrique Segundo da Fonseca** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
-**João Amauri Rodrigues do Nascimento** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
-**John Lennon Fernandes de Andrade** (Bacharelando em Sistemas e Mídias Digitais, UFC)   
-**Luana Moreira Dias** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
-**Luis Henrique da Costa Silva** (Bacharelando em Sistemas e Mídias Digitais, UFC)  
-  
+
+|  NOME                                     |  FUNÇÃO                           |
+|  --------------------------------------   |  -------------------------------  |
+|  **Antônio Lucas Vieira de Lima**         |  Gestão e Design                  | 
+|  **Henrique Segundo da Fonseca**          |  Design, Documentação e Avaliação |
+|  **João Amauri Rodrigues do Nascimento**  |  Codificação                      |
+|  **John Lennon Fernandes de Andrade**     |  Design e Documentação            |
+|  **Luana Moreira Dias**                   |  Codificação                      |
+|  **Luis Henrique da Costa Silva**         |  Design                           |
+
+<a name="license"></a>
+
+## Licença
+Este código está sobre a licença CC0 1.0 Universal. Para mais informações, veja o [LICENSE](LICENSE).
+
+<a name="requisitos"></a>
 
 ## Requisitos
 
@@ -28,6 +62,9 @@
 | VSRF 13 | Hover em objetos interagíveis                  | **COMO** usuário, **QUERO** que os objetos interagíveis possuam um efeito de hover outline. **PARA** identificar visualmente o que pode ser interagido na cena.                                                                                                              | High     | Done        | 📄 [**HoverOutline.cs**](Assets/Scripts/HoverOutline.cs) - Configura, ativa e desativa a outline conforme o raycast do mouse no `Update()`.|
 | VSRF 14 | Mostrar todos objetos interativos              | **COMO** usuário, **QUERO** apertar um botão para mostrar todos os objetos interagíveis da cena. **PARA** ter uma visão geral rápida dos pontos disponíveis para interação.   | Medium   | Done        | 📄 [**MenuSystem.cs**](Assets/Scripts/MenuSystem.cs) - Ao apertar `i` ou o botão de interação na HUD, chama o método `ToggleAllOutlines()` que varre `FindObjectsOfType<Outline>()` e inverte o enable de todas as outlines encontradas.  |
 | VSRF 15 | Menu in‑game / Tablet | **COMO** usuário, **QUERO** apertar um botão dentro do ambiente 3D para abrir um menu que me permita acessar diversas opções (diagramas, roteiros, configurações, voltar ao menu inicial e fechar o simulador). **PARA** gerenciar as funcionalidades do simulador de forma rápida e sem interromper a experiência.   | High   | Done    | Na HUD há um botão para acessar o diagrama principal, e também um botão para acessar o menu, nele haverá a sessão de Objetivos como os objetivos do roteiro e o menu do ambiente 3d, que por sua vez acessa as configurações ou sai do simulador |
+| VSRF 16 | Tooltip em botões da HUD              | **COMO** usuário, **QUERO** que apareça uma tooltip quando colocar o mouse sobre os botões da HUD. **PARA** saber qual a função e atalho do botão.   | Medium   | Done        | 📄 [**Tooltip.cs**](Assets/Scripts/Tooltip.cs), 📄 [**TooltipSystem.cs**](Assets/Scripts/TooltipSystem.cs) e 📄 [**TooltipTrigger.cs**](Assets/Scripts/TooltipTrigger.cs) - Um game object `Tooltip`, que recebe Tooltip.cs, foi criado em um Canvas. Sendo habilitado somente quando um objeto com TooltipTrigger, que define um texto, tiver seu raycast ativado, assim aparecendo a tooltip com seu respectivo texto.|
+| VSRF 17 | Dica de ações              | **COMO** usuário, **QUERO** que apareça um dica na tela do que fazer em cada área ou interação. **PARA** ter uma orientação das minhas ações no simulador.   | Low   | Done        | 📄 [**TriggerHintManager.cs**](Assets/Scripts/TriggerHintManager.cs) - O script é entregue ao game object `TriggerHintManager`, que recebe uma lista de colliders e suas respectivas mensagens. Ao colidir com um desses, habilita a dica no Canvas e define o texto correspondente. |
+| VSRF 18 | Confirmação para fechar o simulador              | **COMO** usuário, **QUERO** que ao apertar `SAIR` apareça um pop-up de confirmação. **PARA** evitar fechamentos não intencionais.   | Medium   | Done        | Ao apertar `SAIR` abre uma outra tela que possui o botão `Sim` que de fato tem a função de fechar e o botão de `Não` que fecha o pop-up. |
 
 ## BugFix
 
@@ -41,24 +78,27 @@
 | VSBF 06 | Limitar rotação vertical   | **COMO** usuário, **QUERO** limitar a rotação da câmera a 90° para cima e 90° para baixo. **PARA** evitar giros completos de 360° desorientadores.                          | Low      | Done        | 📄 [**MouseLook.cs**](Assets/Standard%20Assets/Characters/FirstPersonCharacter/Scripts/MouseLook.cs) - Foi refatorado para usar variável de pitch com `Mathf.Clamp(MinimumX, MaximumX)`, assim impedindo que o jogador consiga rotacionar 360 graus. |
 | VSBF 07 | Movimentação precisa       | **COMO** usuário, **QUERO** que o personagem ande precisamente na direção pressionada sem inclinação lateral. **PARA** melhorar o controle e evitar movimentos indesejados. | Low      | Done        | Foi identificado que a câmera do jogador estava com uma rotação no eixo Y do `Transform.Rotation`, dessa forma foi só ajustar para se comportar exatamente igual a rotação do jogador, ao entregar a mesma rotação inicial. |
 
+<a name="tecnologia"></a>
 
-
-## Sobre  
-VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
-Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (GREI).
 ## Tecnologias 
-### Unity Engine e C#
-<img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+### Unity Engine, C# e Blender
+<img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">  <img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/blender/blender-original.svg">
+
+*Blender não foi utilizado para Projeto I, ele é só um requisito do editável, pois existem arquivos .blend
+
+<a name="guia-de-instalacao"></a>
 
 ## Guia de Instalação
 
 Siga os passos abaixo para configurar e executar este projeto Unity corretamente no seu computador.
 
-### 1. Baixar e Instalar o Unity Hub e o Unity Editor
+### 1. Baixar e Instalar o Unity Hub, o Unity Editor e o Blender
 
 1. Acesse: [https://unity.com/download](https://unity.com/download)
 2. Faça o download do Unity Hub para o seu sistema operacional.
 3. No Unity Hub, instale a versão **2022.3.32f1** do Unity Editor.
+4. Acesse: [https://www.blender.org/download](https://www.blender.org/download)
+5. Faça o download do Blender para o seu sistema operacional.
 
 ### 2. Clonar o Repositório
 
@@ -73,7 +113,7 @@ git clone https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0
 
 Alguns arquivos não podem ser versionados diretamente no GitHub e estão disponíveis nos **Releases** do repositório:
 
-1. Acesse: [https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases](https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases)
+1. Acesse: [https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases/tag/Arquivos](https://github.com/ProjetoIntegrado1/VRSL-GREI-2.0/releases/tag/Arquivos)
 2. Faça o download dos arquivos.
 3. Copie cada arquivo para a pasta indicada dentro do diretório clonado (verifique o nome e caminho em cada release).
 
@@ -82,6 +122,8 @@ Alguns arquivos não podem ser versionados diretamente no GitHub e estão dispon
 1. No Unity Hub, clique em **Add** (Adicionar).
 2. Navegue até a pasta do projeto que você clonou e a adicione.
 3. Execute no Unity Hub e aguarde o carregamento e a indexação de assets pelo Unity.
+
+<a name="estrutura-de-pastas"></a>
 
 ## Estrutura de Pastas
 
@@ -142,5 +184,12 @@ Scripts C# que controlam:
 - Movimentação e câmeras (CameraController).
 - Interações do usuário (UIManager, ButtonHandlers).
 
-## Executável teste
+ <a name="documento"></a>
+
+## Relatório e Apresentação do projeto
+O relatório completo sobre o processo de desenvolvimento dessa aplicação pode ser encontrado em: ??. A apresentação geral do projeto pode ser encontrada em: ??.
+
+<a name="executavel"></a>
+
+## Executável
 https://drive.google.com/drive/folders/17Sk6nZuAYeObsZY-wOQt01NrUsCHnuJa?usp=sharing
