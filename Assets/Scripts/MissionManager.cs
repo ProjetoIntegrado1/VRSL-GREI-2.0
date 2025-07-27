@@ -36,7 +36,7 @@ public class MissionManager : MonoBehaviour
             suppressToggleCallback = true;
             missionText.text = m.description;
             checkBox.isOn = m.isCompleted;
-            checkBox.interactable = !m.isCompleted;
+            //checkBox.interactable = !m.isCompleted;
             suppressToggleCallback = false;
         }
         else
@@ -56,7 +56,7 @@ public class MissionManager : MonoBehaviour
     {
         missions[currentIndex].isCompleted = true;
         UpdateEntryInPanels(currentIndex);
-        checkBox.interactable = false;
+        //checkBox.interactable = false;
         SkipCompletedMissions();
         UpdateMissionUI();
     }
@@ -71,7 +71,7 @@ public class MissionManager : MonoBehaviour
         {
             suppressToggleCallback = true;
             checkBox.isOn = true;
-            checkBox.interactable = false;
+            //checkBox.interactable = false;
             suppressToggleCallback = false;
             SkipCompletedMissions();
             UpdateMissionUI();
@@ -107,7 +107,7 @@ public class MissionManager : MonoBehaviour
             var toggle = entry.transform.Find("Toggle").GetComponent<Toggle>();
             text.text = missions[idx].description;
             toggle.isOn = missions[idx].isCompleted;
-            toggle.interactable = !missions[idx].isCompleted;
+            //toggle.interactable = !missions[idx].isCompleted;
             toggle.onValueChanged.AddListener(val => { if (val) CompleteSpecificMission(idx); });
         }
     }
@@ -119,7 +119,7 @@ public class MissionManager : MonoBehaviour
         var toggle = entry.Find("Toggle").GetComponent<Toggle>();
         suppressToggleCallback = true;
         toggle.isOn = missions[index].isCompleted;
-        toggle.interactable = !missions[index].isCompleted;
+        //toggle.interactable = !missions[index].isCompleted;
         suppressToggleCallback = false;
     }
 

@@ -20,7 +20,7 @@ public class S_AnimaDisjuntor : MonoBehaviour
     void Start()
     {
         animaa = GetComponent<Animator>();
-        animaa.SetBool("LIberar", false);
+        animaa.SetBool("Liberar", false);
         Aux = false;
         cont = false;
 
@@ -43,7 +43,7 @@ public class S_AnimaDisjuntor : MonoBehaviour
 
                 Aux = true;
                 Aux1 = true;
-                animaa.SetBool("LIberar", true);
+                animaa.SetBool("Liberar", true);
                 cont = true;
              
                 
@@ -53,7 +53,7 @@ public class S_AnimaDisjuntor : MonoBehaviour
             {
              
                 Aux = false;
-                animaa.SetBool("LIberar", false);
+                animaa.SetBool("Liberar", false);
 
                 cont = false;
 

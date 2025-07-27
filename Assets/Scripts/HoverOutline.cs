@@ -24,6 +24,7 @@ public class HoverOutline : MonoBehaviour
     {
         // garantir Outline
         outline = GetComponent<Outline>() ?? gameObject.AddComponent<Outline>();
+        outline.OutlineMode = Outline.Mode.OutlineVisible;
         outline.OutlineColor = Color.yellow;
         outline.OutlineWidth = 7f;
         outline.enabled = false;
@@ -83,7 +84,7 @@ public class HoverOutline : MonoBehaviour
 
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out var hit, 100f, interactiveMask))
+        if (Physics.Raycast(ray, out var hit, 50f, interactiveMask))
         {
             HoverOutline hov = hit.collider.GetComponentInParent<HoverOutline>();
             if (hov != null)

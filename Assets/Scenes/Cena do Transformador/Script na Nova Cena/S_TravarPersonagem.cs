@@ -58,8 +58,7 @@ public class S_TravarPersonagem : MonoBehaviour
             jogador.GetComponent<FirstPersonController>().m_MouseLook.XSensitivity = 0;
             jogador.GetComponent<FirstPersonController>().m_MouseLook.YSensitivity = 0;
             jogador.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(false);
-
-        };
+        }
     }
 
 
