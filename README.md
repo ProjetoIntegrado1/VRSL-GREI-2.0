@@ -47,18 +47,22 @@
 VRSL é um simulador de subestações de energia, baseado na subestação da Universidade Federal do Ceará (UFC), sendo utilizado em sala de aula principalmente para a cadeira de Geração, Distribuição e Transmissão do curso de Engenharia Elétrica da UFC.
 Ele foi originalmente desenvolvido pelo Grupo de Redes Elétricas Inteligentes (GREI).
 ## Tecnologias 
-### Unity Engine e C#
-<img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">
+### Unity Engine, C# e Blender
+<img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg">  <img align="center" alt="Rafa-Csharp" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg">  <img align="center" alt="Rafa-Unity" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/blender/blender-original.svg">
+
+*Blender não foi utilizado para Projeto I, ele é só um requisito do editável, pois existem arquivos .blend
 
 ## Guia de Instalação
 
 Siga os passos abaixo para configurar e executar este projeto Unity corretamente no seu computador.
 
-### 1. Baixar e Instalar o Unity Hub e o Unity Editor
+### 1. Baixar e Instalar o Unity Hub, o Unity Editor e o Blender
 
 1. Acesse: [https://unity.com/download](https://unity.com/download)
 2. Faça o download do Unity Hub para o seu sistema operacional.
 3. No Unity Hub, instale a versão **2022.3.32f1** do Unity Editor.
+4. Acesse: [https://www.blender.org/download](https://www.blender.org/download)
+5. Faça o download do Blender para o seu sistema operacional.
 
 ### 2. Clonar o Repositório
 
@@ -142,5 +146,5 @@ Scripts C# que controlam:
 - Movimentação e câmeras (CameraController).
 - Interações do usuário (UIManager, ButtonHandlers).
 
-## Executável teste
+## Executável
 https://drive.google.com/drive/folders/17Sk6nZuAYeObsZY-wOQt01NrUsCHnuJa?usp=sharing
