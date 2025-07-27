@@ -8,7 +8,7 @@
  <a href="#requisitos">Requisitos</a> •
  <a href="#tecnologias">Tecnologias</a> •
  <a href="#guia-de-instalacao">Guia de instalação</a> •
- <a href="#estrutura-de-pastas">Relatório e Apresentação</a> •
+ <a href="#estrutura-de-pastas">Estrutura de pastas</a> •
  <a href="#documento">Relatório e Apresentação</a> •
  <a href="#executavel">Executável</a> •
 </h4>
