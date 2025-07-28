@@ -188,7 +188,7 @@ Scripts C# que controlam:
  <a name="documento"></a>
 
 ## Relatório e Apresentação do projeto
-O relatório completo sobre o processo de desenvolvimento dessa aplicação pode ser encontrado em: ??. A apresentação geral do projeto pode ser encontrada em: ??.
+O relatório completo sobre o processo de desenvolvimento dessa aplicação pode ser encontrado em: [Relatório Técnico](https://drive.google.com/file/d/1uf1vIMlXnMFKpocxtOdnDg-4puPxFkCi/view?usp=drivesdk). A apresentação geral do projeto pode ser encontrada em: [Slide Checkpoint 3](https://drive.google.com/file/d/1uf8s_HTGBPj4E4sQYNZtypiP3gsgfzl8/view?usp=drivesdk).
 
 <a name="executavel"></a>
 
