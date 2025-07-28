@@ -188,7 +188,7 @@ Scripts C# que controlam:
  <a name="documento"></a>
 
 ## Relatório e Apresentação do projeto
-O relatório completo sobre o processo de desenvolvimento dessa aplicação pode ser encontrado em: [Relatório Técnico](https://drive.google.com/file/d/1uf1vIMlXnMFKpocxtOdnDg-4puPxFkCi/view?usp=drivesdk). A apresentação geral do projeto pode ser encontrada em: [Slide Checkpoint 3](https://drive.google.com/file/d/1uf8s_HTGBPj4E4sQYNZtypiP3gsgfzl8/view?usp=drivesdk).
+O relatório completo sobre o processo de desenvolvimento dessa aplicação pode ser encontrado em: [Relatório Técnico](https://drive.google.com/file/d/1uf1vIMlXnMFKpocxtOdnDg-4puPxFkCi/view?usp=drivesdk). A apresentação geral do projeto pode ser encontrada em: [Slide Checkpoint 3](https://drive.google.com/file/d/1uf8s_HTGBPj4E4sQYNZtypiP3gsgfzl8/view?usp=drivesdk) e [Vídeo VRSL](https://drive.google.com/file/d/1-RdPF-9oY39wIV-Ogj8A0BI3no9OKn9G/view?usp=sharing).
 
 <a name="executavel"></a>
 
@@ -199,3 +199,4 @@ https://drive.google.com/drive/folders/17Sk6nZuAYeObsZY-wOQt01NrUsCHnuJa?usp=sha
 
 ## Editável
 https://drive.google.com/drive/folders/1qG8d6cL-4YpxtmiOEZTxRyG4KaoUrjHN?usp=sharing
+
